@@ -101,6 +101,18 @@ function createGraph(data) {
 						show: true
 				}
 			},
+			axis: {
+					x: {
+							type: 'category',
+							categories: times,
+							tick: {
+								multiline: false,
+									culling: {
+											max: 15
+									}
+							}
+					}
+			},
 			zoom: {
 			 enabled: true
 		 	},

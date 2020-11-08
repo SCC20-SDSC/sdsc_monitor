@@ -2,9 +2,11 @@ import re
 import sys
 import csv
 import re
+from datetime import datetime
+
 
 def NC(input):
-
+    print('enter regex')
     filtered = re.sub(';','\n', input)
     filtered = re.sub('`', "", filtered)
     filtered = re.sub(' T ', "_", filtered)
@@ -12,7 +14,6 @@ def NC(input):
     p = 0;
     for i in range (0,len(a)):
         p += float(re.sub('Price=',"",a[i][0]))
-    #b = re.findall('PriceUpdatedTime=/\d{4}-\d{2}-\d{2}\w\d{2}:\d{2}:\d{2}.\d{3}+\d{2}:\d{2}/', filtered)
     return p;
 #print(b)
 #def store():
@@ -47,7 +48,9 @@ def store(arr, name):
             names = ",".join(str(v) for v in name)
             fd.write(names)
             fd.write('\n')
-        arr[0] = row_count
+	now = datetime.now()
+	current_time = now.strftime("%D:%H:%M:%S")
+        arr[0] = current_time 
         store_value = ",".join(str(v) for v in arr)
         fd.write(store_value)
         fd.write('\n')
@@ -57,14 +60,13 @@ def store(arr, name):
 if __name__ == "__main__":
     arr = [-1]
     name = [0]
-    with open('cluster_names.txt', 'r')as i:
-        for line in i:
-            line = re.sub('\n', "", line)
-            name.append(line)
-            print(line)
-            with open(line,'r')as f:
-                k = NC(f.read())
+    with open('data.csv', 'r')as i:
+	line = next(i)
+	line = line.split(",")
+	for clname in line:
+            clname = re.sub("\n", "", clname)
+	    with open(clname,'r')as f:
+      	        k = NC(f.read())
                 arr.append(k)
 
-    print(arr)
     store(arr, name)
