@@ -1,0 +1,42 @@
+Azure CycleCloud command line tools
+===================================
+This package contains utilities that control and connect to Azure CycleCloud 
+clusters and transfer data between different environments. After installation, 
+the following commands will be available:
+
+cyclecloud - Communicate with an Azure CycleCloud installation to create, 
+             manage and connect to clusters.
+
+
+Requirements
+------------
+Python 3.7+ must be installed and on your PATH as `python` or `python3`.
+
+
+Installing on Windows
+---------------------
+Open a PowerShell prompt and run the following command:
+
+    .\install.ps1
+
+The install script updates the Windows system PATH so that the cyclecloud.exe
+command is available in new Powershell sessions.
+
+
+Installing on Linux and macOS
+-----------------------------
+On Linux/macOS the command line tools may be installed per user in each user's
+~/bin directory or system-wide in /usr/local/bin.
+
+If installing per-user, each user is responsible for putting ~/bin on their 
+PATH. One way to do this is to add the following line to ~/.bash_profile:
+
+    PATH=$PATH:~/bin
+
+To install per-user (~/bin), run the following command:
+
+    ./install.sh
+
+To install system-wide (/usr/local/bin), run the following command:
+
+    ./install.sh --system
