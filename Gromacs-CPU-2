@@ -5,9 +5,9 @@ Volumes = [sched=[Azure=[AssignedLun=0];Mount="builtinsched";Name="sched";Persis
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 ClusterSessionId = "15f7bf61-dd81-4eeb-8ed4-8b78b4308389"
 AzureResources = [DataDisksAttached=true;ExtensionsInstalled=true;NetworkInterfaceIds={"/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Network/networkInterfaces/scheduler-MMZGMZRXGM4DALLFHBSTKLJUHE-eth0"};NetworkSecurityGroupId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Network/networkSecurityGroups/scheduler-MMZGMZRXGM4DALLFHBSTKLJUHE";PersistentManagedDiskIds={"/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/disks/scheduler-MMZGMZRXGM4DALLFHBSTKLJUHE-shared"};PublicIpId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Network/publicIPAddresses/scheduler-MMZGMZRXGM4DALLFHBSTKLJUHE-eth0";VirtualMachineId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachines/scheduler-MMZGMZRXGM4DALLFHBSTKLJUHE"]
-IsReturnProxy = true
-Region = "southcentralus"
 InputEndpoints = [ganglia=[Name="ganglia";PrivatePort=8652;PublicPort=8652]]
+Region = "southcentralus"
+IsReturnProxy = true
 Status = "Ready"
 State = "Started"
 Provider = "azure"
@@ -21,14 +21,14 @@ Orchestration = [Creating=false]
 MachineType = "Standard_HB120rs_v2"
 InstanceName = "scheduler-MMZGMZRXGM4DALLFHBSTKLJUHE"
 ActivePhases = {}
-NodeId = "91744d22-ee08-4df6-ae78-b0fe6666e333"
 AdType = "Cloud.Node"
 ManagedServices = {"sharedfs"}
+NodeId = "91744d22-ee08-4df6-ae78-b0fe6666e333"
 Credentials = "azure"
 Tags = [ClusterId="Gromacs-CPU-2(ccuser@pkrvmb4ysfk4r8b:4xd6we3c)";ClusterName="Gromacs-CPU-2";CycleOwner="ccuser@pkrvmb4ysfk4r8b:4xd6we3c";LaunchTime=`2020-11-09T22:01:59.096+00:00`;Name="scheduler"]
 AccountName = "azure"
-Last = [ClusterSessionId="edada2aa-ba94-4142-bf8d-a0d0874a1fb7";InstallationStatus="started";InstanceId="d8fe126b8bdeb632e078d08e9280a1f4";InstanceName="scheduler-MMZGMZRXGM4DALLFHBSTKLJUHE";Orchestration=[];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachines/scheduler-MMZGMZRXGM4DALLFHBSTKLJUHE";SessionId="0b1cab40-e1fd-4d65-8d4c-f11e9c247320"]
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[builtinsched=[export_path="/sched";options="no_root_squash";samba=[enabled=false];type="nfs"];builtinshared=[disabled=false;export_path="/shared";samba=[enabled=false];type="nfs"];defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];maintenance_converge=[enabled=true];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];builtinsched=[fs_type="xfs";mountpoint="/sched"];builtinshared=[disabled=false;fs_type="xfs";mountpoint="/shared"];nfs_sched=[disabled=true;mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;disabled=true;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];version="19.05.5-1"]]
+Last = [ClusterSessionId="edada2aa-ba94-4142-bf8d-a0d0874a1fb7";InstallationStatus="started";InstanceId="d8fe126b8bdeb632e078d08e9280a1f4";InstanceName="scheduler-MMZGMZRXGM4DALLFHBSTKLJUHE";Orchestration=[];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachines/scheduler-MMZGMZRXGM4DALLFHBSTKLJUHE";SessionId="0b1cab40-e1fd-4d65-8d4c-f11e9c247320"]
 Instance = [AccountName="azure";ActualType="Azure.Instance";AdType="Cloud.Instance";BootFinishedTime=`2020-11-09T22:06:10.828+00:00`;ClusterName="Gromacs-CPU-2";CoreCount=120;CreatedTime=`2020-11-09T22:01:59.016+00:00`;Credential="azure";Credentials="azure";FullyQualifiedHostName="ip-0A000005.rdn4b13vcqbetloionbusg4cib.jx.internal.cloudapp.net";HostName="ip-0A000005";InstanceId="d8fe126b8bdeb632e078d08e9280a1f4";LastUpdated=`2020-11-09T22:06:10.828+00:00`;MachineState="Started";MachineType="Standard_HB120rs_v2";Memory=468.75;NodeName="scheduler";OperatingSystem="linux";PowerState="running";Price=3.986652;PriceUpdatedTime=`2020-11-09T22:06:11.034+00:00`;PrivateHostName="ip-0A000005";PrivateIp="10.0.0.5";Provider="azure";PublicIp="13.65.136.124";Region="southcentralus";StartTime=`2020-11-09T22:01:59.016+00:00`;Status="ok";StatusChecks=[Jetpack=[Status="ok"];System=[Description="Provisioning succeeded";Status="ok";Time=`2020-11-09T22:04:46.375+00:00`];VMAgent=[Status="ok"]];StatusDescription="Provisioning succeeded; VM appears OK";SubnetId="scc-rg6/DefaultNetwork_southcentralus/default";Tags=[ClusterId="Gromacs-CPU-2(ccuser@pkrvmb4ysfk4r8b:4xd6we3c)";ClusterName="Gromacs-CPU-2";CycleOwner="ccuser@pkrvmb4ysfk4r8b:4xd6we3c";LaunchTime="2020-11-09T22:01:59.096+00:00";Name="scheduler"];VirtualMachineDescription="120 vCPUs, 468.75 GB RAM, 1023.0 GB local disk"]
 SessionId = "25e9bad5-9ffb-4c30-ae49-65ed21ac029a"
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:master'=[Name="cyclecloud/slurm:master";Order=1002;Project="slurm";SourceLocker="cyclecloud";Spec="master";Version="2.1.1"];'slurm:scheduler'=[Name="slurm:scheduler";Order=1001;Project="slurm";Spec="scheduler"]]
@@ -48,29 +48,29 @@ SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 ClusterSessionId = "15f7bf61-dd81-4eeb-8ed4-8b78b4308389"
 Region = "southcentralus"
 Status = "Ready"
-State = "Started"
 Provider = "azure"
+State = "Started"
 CoreCount = 120
-InstanceId = "8d177d673be827c7bf5e112e4295607e"
 NodeIndex = -1
+InstanceId = "8d177d673be827c7bf5e112e4295607e"
 Azure = [AllocationMethod="scaleset";ResourceGroup="scc-rg6"]
 InstallationStatus = "success"
 ResourceId = "/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-3xvho6vo6nhxv/virtualMachines/4"
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
 ClusterName = "Gromacs-CPU-2"
-OperationId = "15c26bd5-781b-46a2-806d-7c7a8b58a9a3"
 Cell = "hpc-3xvho6vo6nhxv"
+OperationId = "15c26bd5-781b-46a2-806d-7c7a8b58a9a3"
 Orchestration = [AllocationPlaceholder=false;Creating=false;Status="succeeded"]
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
-NodeId = "490dc738-32d6-4967-b0c4-a31464dae375"
 AdType = "Cloud.Node"
+NodeId = "490dc738-32d6-4967-b0c4-a31464dae375"
 Credentials = "azure"
 AccountName = "azure"
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
 Interruptible = false
-Instance = [AccountName="azure";ActualType="Azure.Instance";AdType="Cloud.Instance";BootFinishedTime=`2020-11-09T22:40:12.031+00:00`;ClusterName="Gromacs-CPU-2";CoreCount=120;CreatedTime=`2020-11-09T22:40:12.031+00:00`;Credential="azure";Credentials="azure";FullyQualifiedHostName="ip-0A000014.rdn4b13vcqbetloionbusg4cib.jx.internal.cloudapp.net";HostName="ip-0A000014";InstanceId="8d177d673be827c7bf5e112e4295607e";LastUpdated=`2020-11-09T22:41:42.031+00:00`;MachineState="Started";MachineType="Standard_HB120rs_v2";Memory=468.75;NodeName="hpc-pg0-4";OperatingSystem="linux";PowerState="running";Price=3.962104;PriceUpdatedTime=`2020-11-09T22:41:42.226+00:00`;PrivateHostName="ip-0A000014";PrivateIp="10.0.0.20";Provider="azure";Region="southcentralus";StartTime=`2020-11-09T22:40:12.031+00:00`;Status="ok";StatusChecks=[Jetpack=[Status="ok"];System=[Description="Provisioning succeeded";Status="ok";Time=`2020-11-09T22:40:01.573+00:00`];VMAgent=[Status="ok"]];SubnetId="scc-rg6/DefaultNetwork_southcentralus/default";Tags=[ClusterId="Gromacs-CPU-2(ccuser@pkrvmb4ysfk4r8b:4xd6we3c)";ClusterName="Gromacs-CPU-2";CycleOwner="ccuser@pkrvmb4ysfk4r8b:4xd6we3c";LaunchTime="2020-11-09T22:37:11.885+00:00"];VirtualMachineDescription="120 vCPUs, 468.75 GB RAM, 1023.0 GB local disk"]
 PlacementGroupId = "hpc-Standard_HB120rs_v2-pg0"
+Instance = [AccountName="azure";ActualType="Azure.Instance";AdType="Cloud.Instance";BootFinishedTime=`2020-11-09T22:40:12.031+00:00`;ClusterName="Gromacs-CPU-2";CoreCount=120;CreatedTime=`2020-11-09T22:40:12.031+00:00`;Credential="azure";Credentials="azure";FullyQualifiedHostName="ip-0A000014.rdn4b13vcqbetloionbusg4cib.jx.internal.cloudapp.net";HostName="ip-0A000014";InstanceId="8d177d673be827c7bf5e112e4295607e";LastUpdated=`2020-11-09T22:41:42.031+00:00`;MachineState="Started";MachineType="Standard_HB120rs_v2";Memory=468.75;NodeName="hpc-pg0-4";OperatingSystem="linux";PowerState="running";Price=3.962104;PriceUpdatedTime=`2020-11-09T22:41:42.226+00:00`;PrivateHostName="ip-0A000014";PrivateIp="10.0.0.20";Provider="azure";Region="southcentralus";StartTime=`2020-11-09T22:40:12.031+00:00`;Status="ok";StatusChecks=[Jetpack=[Status="ok"];System=[Description="Provisioning succeeded";Status="ok";Time=`2020-11-09T22:40:01.573+00:00`];VMAgent=[Status="ok"]];SubnetId="scc-rg6/DefaultNetwork_southcentralus/default";Tags=[ClusterId="Gromacs-CPU-2(ccuser@pkrvmb4ysfk4r8b:4xd6we3c)";ClusterName="Gromacs-CPU-2";CycleOwner="ccuser@pkrvmb4ysfk4r8b:4xd6we3c";LaunchTime="2020-11-09T22:37:11.885+00:00"];VirtualMachineDescription="120 vCPUs, 468.75 GB RAM, 1023.0 GB local disk"]
 Fixed = true
 SessionId = "2ec09b33-a8a2-4c0f-a67b-9c5d5fcf3369"
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
@@ -79,8 +79,8 @@ Name = "hpc-pg0-4"
 Lifecycle = [Started=[Reason="Autoscaled";Timing=[Configure=[Begin=`2020-11-09T22:40:23.147+00:00`;Count=1;End=`2020-11-09T22:42:30.868+00:00`;Status="Succeeded"];Create=[Begin=`2020-11-09T22:37:05.349+00:00`;Count=1;End=`2020-11-09T22:42:30.932+00:00`;Status="Succeeded"];CreateVM=[Begin=`2020-11-09T22:37:11.687+00:00`;Count=1;End=`2020-11-09T22:40:12.031+00:00`;Status="Succeeded"];Started=[Begin=`2020-11-09T22:42:30.932+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Deallocate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.AllocateNodes'=[Dependencies={"Azure.CreateResourceGroup","NodeArrayActivation"};EndTime=`2020-11-09T22:40:26.041+00:00`;StartTime=`2020-11-09T22:37:11.386+00:00`;Status="Completed"];'Azure.AssignResourceGroups'=[EndTime=`2020-11-09T22:37:11.233+00:00`;StartTime=`2020-11-09T22:37:11.168+00:00`;Status="Completed"];'Azure.CreateResourceGroup'=[Dependencies={"Azure.AssignResourceGroups"};EndTime=`2020-11-09T22:37:11.352+00:00`;StartTime=`2020-11-09T22:37:11.260+00:00`;Status="Completed"];'Azure.InitializeNodes'=[EndTime=`2020-11-09T22:40:26.095+00:00`;StartTime=`2020-11-09T22:40:26.042+00:00`;Status="Completed"];'Cloud.AwaitBootup'=[EndTime=`2020-11-09T22:40:26.137+00:00`;StartTime=`2020-11-09T22:40:26.096+00:00`;Status="Completed"];'Cloud.AwaitInstallation'=[EndTime=`2020-11-09T22:42:30.931+00:00`;StartTime=`2020-11-09T22:40:26.138+00:00`;Status="Completed"];'Cloud.StageResources'=[Delay=5;Dependencies={"Cloud.ValidateNodes"};EndTime=`2020-11-09T22:37:11.166+00:00`;StartTime=`2020-11-09T22:37:05.451+00:00`;Status="Completed"];'Cloud.ValidateNodes'=[EndTime=`2020-11-09T22:37:05.425+00:00`;StartTime=`2020-11-09T22:37:05.350+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Started"
 
 UsePublicNetwork = true
@@ -91,29 +91,29 @@ SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 ClusterSessionId = "15f7bf61-dd81-4eeb-8ed4-8b78b4308389"
 Region = "southcentralus"
 Status = "Ready"
-State = "Started"
 Provider = "azure"
+State = "Started"
 CoreCount = 120
-InstanceId = "df9d7a22c8f819902839e9b80ed87696"
 NodeIndex = -1
+InstanceId = "df9d7a22c8f819902839e9b80ed87696"
 Azure = [AllocationMethod="scaleset";ResourceGroup="scc-rg6"]
 InstallationStatus = "success"
 ResourceId = "/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-3xvho6vo6nhxv/virtualMachines/5"
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
 ClusterName = "Gromacs-CPU-2"
-OperationId = "15c26bd5-781b-46a2-806d-7c7a8b58a9a3"
 Cell = "hpc-3xvho6vo6nhxv"
+OperationId = "15c26bd5-781b-46a2-806d-7c7a8b58a9a3"
 Orchestration = [AllocationPlaceholder=false;Creating=false;Status="succeeded"]
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
-NodeId = "93b305d9-47e9-49f5-8cf7-a56cce61cbc5"
 AdType = "Cloud.Node"
+NodeId = "93b305d9-47e9-49f5-8cf7-a56cce61cbc5"
 Credentials = "azure"
 AccountName = "azure"
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
 Interruptible = false
-Instance = [AccountName="azure";ActualType="Azure.Instance";AdType="Cloud.Instance";BootFinishedTime=`2020-11-09T22:40:12.031+00:00`;ClusterName="Gromacs-CPU-2";CoreCount=120;CreatedTime=`2020-11-09T22:40:12.031+00:00`;Credential="azure";Credentials="azure";FullyQualifiedHostName="ip-0A000015.rdn4b13vcqbetloionbusg4cib.jx.internal.cloudapp.net";HostName="ip-0A000015";InstanceId="df9d7a22c8f819902839e9b80ed87696";LastUpdated=`2020-11-09T22:41:42.031+00:00`;MachineState="Started";MachineType="Standard_HB120rs_v2";Memory=468.75;NodeName="hpc-pg0-5";OperatingSystem="linux";PowerState="running";Price=3.962104;PriceUpdatedTime=`2020-11-09T22:41:42.226+00:00`;PrivateHostName="ip-0A000015";PrivateIp="10.0.0.21";Provider="azure";Region="southcentralus";StartTime=`2020-11-09T22:40:12.031+00:00`;Status="ok";StatusChecks=[Jetpack=[Status="ok"];System=[Description="Provisioning succeeded";Status="ok";Time=`2020-11-09T22:40:07.729+00:00`];VMAgent=[Status="ok"]];SubnetId="scc-rg6/DefaultNetwork_southcentralus/default";Tags=[ClusterId="Gromacs-CPU-2(ccuser@pkrvmb4ysfk4r8b:4xd6we3c)";ClusterName="Gromacs-CPU-2";CycleOwner="ccuser@pkrvmb4ysfk4r8b:4xd6we3c";LaunchTime="2020-11-09T22:37:11.885+00:00"];VirtualMachineDescription="120 vCPUs, 468.75 GB RAM, 1023.0 GB local disk"]
 PlacementGroupId = "hpc-Standard_HB120rs_v2-pg0"
+Instance = [AccountName="azure";ActualType="Azure.Instance";AdType="Cloud.Instance";BootFinishedTime=`2020-11-09T22:40:12.031+00:00`;ClusterName="Gromacs-CPU-2";CoreCount=120;CreatedTime=`2020-11-09T22:40:12.031+00:00`;Credential="azure";Credentials="azure";FullyQualifiedHostName="ip-0A000015.rdn4b13vcqbetloionbusg4cib.jx.internal.cloudapp.net";HostName="ip-0A000015";InstanceId="df9d7a22c8f819902839e9b80ed87696";LastUpdated=`2020-11-09T22:41:42.031+00:00`;MachineState="Started";MachineType="Standard_HB120rs_v2";Memory=468.75;NodeName="hpc-pg0-5";OperatingSystem="linux";PowerState="running";Price=3.962104;PriceUpdatedTime=`2020-11-09T22:41:42.226+00:00`;PrivateHostName="ip-0A000015";PrivateIp="10.0.0.21";Provider="azure";Region="southcentralus";StartTime=`2020-11-09T22:40:12.031+00:00`;Status="ok";StatusChecks=[Jetpack=[Status="ok"];System=[Description="Provisioning succeeded";Status="ok";Time=`2020-11-09T22:40:07.729+00:00`];VMAgent=[Status="ok"]];SubnetId="scc-rg6/DefaultNetwork_southcentralus/default";Tags=[ClusterId="Gromacs-CPU-2(ccuser@pkrvmb4ysfk4r8b:4xd6we3c)";ClusterName="Gromacs-CPU-2";CycleOwner="ccuser@pkrvmb4ysfk4r8b:4xd6we3c";LaunchTime="2020-11-09T22:37:11.885+00:00"];VirtualMachineDescription="120 vCPUs, 468.75 GB RAM, 1023.0 GB local disk"]
 Fixed = true
 SessionId = "b9a59de1-68e8-4a5b-9cad-84db611ab6ea"
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
@@ -122,8 +122,8 @@ Name = "hpc-pg0-5"
 Lifecycle = [Started=[Reason="Autoscaled";Timing=[Configure=[Begin=`2020-11-09T22:40:13.045+00:00`;Count=1;End=`2020-11-09T22:42:40.578+00:00`;Status="Succeeded"];Create=[Begin=`2020-11-09T22:37:05.349+00:00`;Count=1;End=`2020-11-09T22:42:40.632+00:00`;Status="Succeeded"];CreateVM=[Begin=`2020-11-09T22:37:11.687+00:00`;Count=1;End=`2020-11-09T22:40:12.031+00:00`;Status="Succeeded"];Started=[Begin=`2020-11-09T22:42:40.632+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Deallocate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.AllocateNodes'=[Dependencies={"Azure.CreateResourceGroup","NodeArrayActivation"};EndTime=`2020-11-09T22:40:26.041+00:00`;StartTime=`2020-11-09T22:37:11.386+00:00`;Status="Completed"];'Azure.AssignResourceGroups'=[EndTime=`2020-11-09T22:37:11.233+00:00`;StartTime=`2020-11-09T22:37:11.168+00:00`;Status="Completed"];'Azure.CreateResourceGroup'=[Dependencies={"Azure.AssignResourceGroups"};EndTime=`2020-11-09T22:37:11.352+00:00`;StartTime=`2020-11-09T22:37:11.260+00:00`;Status="Completed"];'Azure.InitializeNodes'=[EndTime=`2020-11-09T22:40:26.095+00:00`;StartTime=`2020-11-09T22:40:26.042+00:00`;Status="Completed"];'Cloud.AwaitBootup'=[EndTime=`2020-11-09T22:40:26.137+00:00`;StartTime=`2020-11-09T22:40:26.096+00:00`;Status="Completed"];'Cloud.AwaitInstallation'=[EndTime=`2020-11-09T22:42:40.631+00:00`;StartTime=`2020-11-09T22:40:26.138+00:00`;Status="Completed"];'Cloud.StageResources'=[Delay=5;Dependencies={"Cloud.ValidateNodes"};EndTime=`2020-11-09T22:37:11.166+00:00`;StartTime=`2020-11-09T22:37:05.451+00:00`;Status="Completed"];'Cloud.ValidateNodes'=[EndTime=`2020-11-09T22:37:05.425+00:00`;StartTime=`2020-11-09T22:37:05.350+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Started"
 
 UsePublicNetwork = true
@@ -134,29 +134,29 @@ SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 ClusterSessionId = "15f7bf61-dd81-4eeb-8ed4-8b78b4308389"
 Region = "southcentralus"
 Status = "Ready"
-State = "Started"
 Provider = "azure"
+State = "Started"
 CoreCount = 120
-InstanceId = "2551a1c3b991e8669e7f59864db95a42"
 NodeIndex = -1
+InstanceId = "2551a1c3b991e8669e7f59864db95a42"
 Azure = [AllocationMethod="scaleset";ResourceGroup="scc-rg6"]
 InstallationStatus = "success"
 ResourceId = "/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-3xvho6vo6nhxv/virtualMachines/2"
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
 ClusterName = "Gromacs-CPU-2"
-OperationId = "15c26bd5-781b-46a2-806d-7c7a8b58a9a3"
 Cell = "hpc-3xvho6vo6nhxv"
+OperationId = "15c26bd5-781b-46a2-806d-7c7a8b58a9a3"
 Orchestration = [AllocationPlaceholder=false;Creating=false;Status="succeeded"]
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
-NodeId = "c50e9f19-276b-44e5-a5fc-503f5dd0aea1"
 AdType = "Cloud.Node"
+NodeId = "c50e9f19-276b-44e5-a5fc-503f5dd0aea1"
 Credentials = "azure"
 AccountName = "azure"
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
 Interruptible = false
-Instance = [AccountName="azure";ActualType="Azure.Instance";AdType="Cloud.Instance";BootFinishedTime=`2020-11-09T22:40:12.031+00:00`;ClusterName="Gromacs-CPU-2";CoreCount=120;CreatedTime=`2020-11-09T22:40:12.031+00:00`;Credential="azure";Credentials="azure";FullyQualifiedHostName="ip-0A000010.rdn4b13vcqbetloionbusg4cib.jx.internal.cloudapp.net";HostName="ip-0A000010";InstanceId="2551a1c3b991e8669e7f59864db95a42";LastUpdated=`2020-11-09T22:41:42.031+00:00`;MachineState="Started";MachineType="Standard_HB120rs_v2";Memory=468.75;NodeName="hpc-pg0-2";OperatingSystem="linux";PowerState="running";Price=3.962104;PriceUpdatedTime=`2020-11-09T22:41:42.226+00:00`;PrivateHostName="ip-0A000010";PrivateIp="10.0.0.16";Provider="azure";Region="southcentralus";StartTime=`2020-11-09T22:40:12.031+00:00`;Status="ok";StatusChecks=[Jetpack=[Status="ok"];System=[Description="Provisioning succeeded";Status="ok";Time=`2020-11-09T22:39:59.604+00:00`];VMAgent=[Status="ok"]];SubnetId="scc-rg6/DefaultNetwork_southcentralus/default";Tags=[ClusterId="Gromacs-CPU-2(ccuser@pkrvmb4ysfk4r8b:4xd6we3c)";ClusterName="Gromacs-CPU-2";CycleOwner="ccuser@pkrvmb4ysfk4r8b:4xd6we3c";LaunchTime="2020-11-09T22:37:11.885+00:00"];VirtualMachineDescription="120 vCPUs, 468.75 GB RAM, 1023.0 GB local disk"]
 PlacementGroupId = "hpc-Standard_HB120rs_v2-pg0"
+Instance = [AccountName="azure";ActualType="Azure.Instance";AdType="Cloud.Instance";BootFinishedTime=`2020-11-09T22:40:12.031+00:00`;ClusterName="Gromacs-CPU-2";CoreCount=120;CreatedTime=`2020-11-09T22:40:12.031+00:00`;Credential="azure";Credentials="azure";FullyQualifiedHostName="ip-0A000010.rdn4b13vcqbetloionbusg4cib.jx.internal.cloudapp.net";HostName="ip-0A000010";InstanceId="2551a1c3b991e8669e7f59864db95a42";LastUpdated=`2020-11-09T22:41:42.031+00:00`;MachineState="Started";MachineType="Standard_HB120rs_v2";Memory=468.75;NodeName="hpc-pg0-2";OperatingSystem="linux";PowerState="running";Price=3.962104;PriceUpdatedTime=`2020-11-09T22:41:42.226+00:00`;PrivateHostName="ip-0A000010";PrivateIp="10.0.0.16";Provider="azure";Region="southcentralus";StartTime=`2020-11-09T22:40:12.031+00:00`;Status="ok";StatusChecks=[Jetpack=[Status="ok"];System=[Description="Provisioning succeeded";Status="ok";Time=`2020-11-09T22:39:59.604+00:00`];VMAgent=[Status="ok"]];SubnetId="scc-rg6/DefaultNetwork_southcentralus/default";Tags=[ClusterId="Gromacs-CPU-2(ccuser@pkrvmb4ysfk4r8b:4xd6we3c)";ClusterName="Gromacs-CPU-2";CycleOwner="ccuser@pkrvmb4ysfk4r8b:4xd6we3c";LaunchTime="2020-11-09T22:37:11.885+00:00"];VirtualMachineDescription="120 vCPUs, 468.75 GB RAM, 1023.0 GB local disk"]
 Fixed = true
 SessionId = "fdded2a3-3805-4507-aaa2-38a9d064e3b0"
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
@@ -165,8 +165,8 @@ Name = "hpc-pg0-2"
 Lifecycle = [Started=[Reason="Autoscaled";Timing=[Configure=[Begin=`2020-11-09T22:40:17.766+00:00`;Count=1;End=`2020-11-09T22:42:50.540+00:00`;Status="Succeeded"];Create=[Begin=`2020-11-09T22:37:05.349+00:00`;Count=1;End=`2020-11-09T22:42:50.595+00:00`;Status="Succeeded"];CreateVM=[Begin=`2020-11-09T22:37:11.687+00:00`;Count=1;End=`2020-11-09T22:40:12.031+00:00`;Status="Succeeded"];Started=[Begin=`2020-11-09T22:42:50.595+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Deallocate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.AllocateNodes'=[Dependencies={"Azure.CreateResourceGroup","NodeArrayActivation"};EndTime=`2020-11-09T22:40:26.041+00:00`;StartTime=`2020-11-09T22:37:11.386+00:00`;Status="Completed"];'Azure.AssignResourceGroups'=[EndTime=`2020-11-09T22:37:11.233+00:00`;StartTime=`2020-11-09T22:37:11.168+00:00`;Status="Completed"];'Azure.CreateResourceGroup'=[Dependencies={"Azure.AssignResourceGroups"};EndTime=`2020-11-09T22:37:11.352+00:00`;StartTime=`2020-11-09T22:37:11.260+00:00`;Status="Completed"];'Azure.InitializeNodes'=[EndTime=`2020-11-09T22:40:26.095+00:00`;StartTime=`2020-11-09T22:40:26.042+00:00`;Status="Completed"];'Cloud.AwaitBootup'=[EndTime=`2020-11-09T22:40:26.137+00:00`;StartTime=`2020-11-09T22:40:26.096+00:00`;Status="Completed"];'Cloud.AwaitInstallation'=[EndTime=`2020-11-09T22:42:50.594+00:00`;StartTime=`2020-11-09T22:40:26.138+00:00`;Status="Completed"];'Cloud.StageResources'=[Delay=5;Dependencies={"Cloud.ValidateNodes"};EndTime=`2020-11-09T22:37:11.166+00:00`;StartTime=`2020-11-09T22:37:05.451+00:00`;Status="Completed"];'Cloud.ValidateNodes'=[EndTime=`2020-11-09T22:37:05.425+00:00`;StartTime=`2020-11-09T22:37:05.350+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Started"
 
 UsePublicNetwork = true
@@ -177,29 +177,29 @@ SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 ClusterSessionId = "15f7bf61-dd81-4eeb-8ed4-8b78b4308389"
 Region = "southcentralus"
 Status = "Ready"
-State = "Started"
 Provider = "azure"
+State = "Started"
 CoreCount = 120
-InstanceId = "ce2fffe5db18b0fdf8782d70a4bbad57"
 NodeIndex = -1
+InstanceId = "ce2fffe5db18b0fdf8782d70a4bbad57"
 Azure = [AllocationMethod="scaleset";ResourceGroup="scc-rg6"]
 InstallationStatus = "success"
 ResourceId = "/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-3xvho6vo6nhxv/virtualMachines/1"
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
 ClusterName = "Gromacs-CPU-2"
-OperationId = "15c26bd5-781b-46a2-806d-7c7a8b58a9a3"
 Cell = "hpc-3xvho6vo6nhxv"
+OperationId = "15c26bd5-781b-46a2-806d-7c7a8b58a9a3"
 Orchestration = [AllocationPlaceholder=false;Creating=false;Status="succeeded"]
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
-NodeId = "b255b1b9-58b3-4f93-84c7-c1592b5edf32"
 AdType = "Cloud.Node"
+NodeId = "b255b1b9-58b3-4f93-84c7-c1592b5edf32"
 Credentials = "azure"
 AccountName = "azure"
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
 Interruptible = false
-Instance = [AccountName="azure";ActualType="Azure.Instance";AdType="Cloud.Instance";BootFinishedTime=`2020-11-09T22:41:42.031+00:00`;ClusterName="Gromacs-CPU-2";CoreCount=120;CreatedTime=`2020-11-09T22:40:12.031+00:00`;Credential="azure";Credentials="azure";FullyQualifiedHostName="ip-0A00000E.rdn4b13vcqbetloionbusg4cib.jx.internal.cloudapp.net";HostName="ip-0A00000E";InstanceId="ce2fffe5db18b0fdf8782d70a4bbad57";LastUpdated=`2020-11-09T22:41:42.031+00:00`;MachineState="Started";MachineType="Standard_HB120rs_v2";Memory=468.75;NodeName="hpc-pg0-1";OperatingSystem="linux";PowerState="running";Price=3.962104;PriceUpdatedTime=`2020-11-09T22:41:42.226+00:00`;PrivateHostName="ip-0A00000E";PrivateIp="10.0.0.14";Provider="azure";Region="southcentralus";StartTime=`2020-11-09T22:40:12.031+00:00`;Status="ok";StatusChecks=[Jetpack=[Status="ok"];System=[Description="Provisioning succeeded";Status="ok";Time=`2020-11-09T22:41:31.986+00:00`];VMAgent=[Status="ok"]];SubnetId="scc-rg6/DefaultNetwork_southcentralus/default";Tags=[ClusterId="Gromacs-CPU-2(ccuser@pkrvmb4ysfk4r8b:4xd6we3c)";ClusterName="Gromacs-CPU-2";CycleOwner="ccuser@pkrvmb4ysfk4r8b:4xd6we3c";LaunchTime="2020-11-09T22:37:11.885+00:00"];VirtualMachineDescription="120 vCPUs, 468.75 GB RAM, 1023.0 GB local disk"]
 PlacementGroupId = "hpc-Standard_HB120rs_v2-pg0"
+Instance = [AccountName="azure";ActualType="Azure.Instance";AdType="Cloud.Instance";BootFinishedTime=`2020-11-09T22:41:42.031+00:00`;ClusterName="Gromacs-CPU-2";CoreCount=120;CreatedTime=`2020-11-09T22:40:12.031+00:00`;Credential="azure";Credentials="azure";FullyQualifiedHostName="ip-0A00000E.rdn4b13vcqbetloionbusg4cib.jx.internal.cloudapp.net";HostName="ip-0A00000E";InstanceId="ce2fffe5db18b0fdf8782d70a4bbad57";LastUpdated=`2020-11-09T22:41:42.031+00:00`;MachineState="Started";MachineType="Standard_HB120rs_v2";Memory=468.75;NodeName="hpc-pg0-1";OperatingSystem="linux";PowerState="running";Price=3.962104;PriceUpdatedTime=`2020-11-09T22:41:42.226+00:00`;PrivateHostName="ip-0A00000E";PrivateIp="10.0.0.14";Provider="azure";Region="southcentralus";StartTime=`2020-11-09T22:40:12.031+00:00`;Status="ok";StatusChecks=[Jetpack=[Status="ok"];System=[Description="Provisioning succeeded";Status="ok";Time=`2020-11-09T22:41:31.986+00:00`];VMAgent=[Status="ok"]];SubnetId="scc-rg6/DefaultNetwork_southcentralus/default";Tags=[ClusterId="Gromacs-CPU-2(ccuser@pkrvmb4ysfk4r8b:4xd6we3c)";ClusterName="Gromacs-CPU-2";CycleOwner="ccuser@pkrvmb4ysfk4r8b:4xd6we3c";LaunchTime="2020-11-09T22:37:11.885+00:00"];VirtualMachineDescription="120 vCPUs, 468.75 GB RAM, 1023.0 GB local disk"]
 Fixed = true
 SessionId = "48c7eddb-bb7f-424c-b7d7-488b5948a48d"
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
@@ -208,8 +208,8 @@ Name = "hpc-pg0-1"
 Lifecycle = [Started=[Reason="Autoscaled";Timing=[Configure=[Begin=`2020-11-09T22:40:15.567+00:00`;Count=1;End=`2020-11-09T22:42:48.684+00:00`;Status="Succeeded"];Create=[Begin=`2020-11-09T22:37:05.349+00:00`;Count=1;End=`2020-11-09T22:43:03.043+00:00`;Status="Succeeded"];CreateVM=[Begin=`2020-11-09T22:37:11.687+00:00`;Count=1;End=`2020-11-09T22:41:42.031+00:00`;Status="Succeeded"];Started=[Begin=`2020-11-09T22:43:03.043+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Deallocate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.AllocateNodes'=[Dependencies={"Azure.CreateResourceGroup","NodeArrayActivation"};EndTime=`2020-11-09T22:41:56.055+00:00`;StartTime=`2020-11-09T22:37:11.386+00:00`;Status="Completed"];'Azure.AssignResourceGroups'=[EndTime=`2020-11-09T22:37:11.233+00:00`;StartTime=`2020-11-09T22:37:11.168+00:00`;Status="Completed"];'Azure.CreateResourceGroup'=[Dependencies={"Azure.AssignResourceGroups"};EndTime=`2020-11-09T22:37:11.352+00:00`;StartTime=`2020-11-09T22:37:11.260+00:00`;Status="Completed"];'Azure.InitializeNodes'=[EndTime=`2020-11-09T22:41:56.121+00:00`;StartTime=`2020-11-09T22:41:56.056+00:00`;Status="Completed"];'Cloud.AwaitBootup'=[EndTime=`2020-11-09T22:41:56.158+00:00`;StartTime=`2020-11-09T22:41:56.122+00:00`;Status="Completed"];'Cloud.AwaitInstallation'=[EndTime=`2020-11-09T22:43:03.043+00:00`;StartTime=`2020-11-09T22:41:56.158+00:00`;Status="Completed"];'Cloud.StageResources'=[Delay=5;Dependencies={"Cloud.ValidateNodes"};EndTime=`2020-11-09T22:37:11.166+00:00`;StartTime=`2020-11-09T22:37:05.451+00:00`;Status="Completed"];'Cloud.ValidateNodes'=[EndTime=`2020-11-09T22:37:05.425+00:00`;StartTime=`2020-11-09T22:37:05.350+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Started"
 
 UsePublicNetwork = true
@@ -220,29 +220,29 @@ SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 ClusterSessionId = "15f7bf61-dd81-4eeb-8ed4-8b78b4308389"
 Region = "southcentralus"
 Status = "Ready"
-State = "Started"
 Provider = "azure"
+State = "Started"
 CoreCount = 120
-InstanceId = "91caf941976d6bd7efcaaf9a5039a47d"
 NodeIndex = -1
+InstanceId = "91caf941976d6bd7efcaaf9a5039a47d"
 Azure = [AllocationMethod="scaleset";ResourceGroup="scc-rg6"]
 InstallationStatus = "success"
 ResourceId = "/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-3xvho6vo6nhxv/virtualMachines/3"
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
 ClusterName = "Gromacs-CPU-2"
-OperationId = "15c26bd5-781b-46a2-806d-7c7a8b58a9a3"
 Cell = "hpc-3xvho6vo6nhxv"
+OperationId = "15c26bd5-781b-46a2-806d-7c7a8b58a9a3"
 Orchestration = [AllocationPlaceholder=false;Creating=false;Status="succeeded"]
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
-NodeId = "560dd114-4de8-4fb9-9272-bd1489294ef0"
 AdType = "Cloud.Node"
+NodeId = "560dd114-4de8-4fb9-9272-bd1489294ef0"
 Credentials = "azure"
 AccountName = "azure"
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
 Interruptible = false
-Instance = [AccountName="azure";ActualType="Azure.Instance";AdType="Cloud.Instance";BootFinishedTime=`2020-11-09T22:40:12.031+00:00`;ClusterName="Gromacs-CPU-2";CoreCount=120;CreatedTime=`2020-11-09T22:40:12.031+00:00`;Credential="azure";Credentials="azure";FullyQualifiedHostName="ip-0A000013.rdn4b13vcqbetloionbusg4cib.jx.internal.cloudapp.net";HostName="ip-0A000013";InstanceId="91caf941976d6bd7efcaaf9a5039a47d";LastUpdated=`2020-11-09T22:41:42.031+00:00`;MachineState="Started";MachineType="Standard_HB120rs_v2";Memory=468.75;NodeName="hpc-pg0-3";OperatingSystem="linux";PowerState="running";Price=3.962104;PriceUpdatedTime=`2020-11-09T22:41:42.226+00:00`;PrivateHostName="ip-0A000013";PrivateIp="10.0.0.19";Provider="azure";Region="southcentralus";StartTime=`2020-11-09T22:40:12.031+00:00`;Status="ok";StatusChecks=[Jetpack=[Status="ok"];System=[Description="Provisioning succeeded";Status="ok";Time=`2020-11-09T22:40:01.604+00:00`];VMAgent=[Status="ok"]];SubnetId="scc-rg6/DefaultNetwork_southcentralus/default";Tags=[ClusterId="Gromacs-CPU-2(ccuser@pkrvmb4ysfk4r8b:4xd6we3c)";ClusterName="Gromacs-CPU-2";CycleOwner="ccuser@pkrvmb4ysfk4r8b:4xd6we3c";LaunchTime="2020-11-09T22:37:11.885+00:00"];VirtualMachineDescription="120 vCPUs, 468.75 GB RAM, 1023.0 GB local disk"]
 PlacementGroupId = "hpc-Standard_HB120rs_v2-pg0"
+Instance = [AccountName="azure";ActualType="Azure.Instance";AdType="Cloud.Instance";BootFinishedTime=`2020-11-09T22:40:12.031+00:00`;ClusterName="Gromacs-CPU-2";CoreCount=120;CreatedTime=`2020-11-09T22:40:12.031+00:00`;Credential="azure";Credentials="azure";FullyQualifiedHostName="ip-0A000013.rdn4b13vcqbetloionbusg4cib.jx.internal.cloudapp.net";HostName="ip-0A000013";InstanceId="91caf941976d6bd7efcaaf9a5039a47d";LastUpdated=`2020-11-09T22:41:42.031+00:00`;MachineState="Started";MachineType="Standard_HB120rs_v2";Memory=468.75;NodeName="hpc-pg0-3";OperatingSystem="linux";PowerState="running";Price=3.962104;PriceUpdatedTime=`2020-11-09T22:41:42.226+00:00`;PrivateHostName="ip-0A000013";PrivateIp="10.0.0.19";Provider="azure";Region="southcentralus";StartTime=`2020-11-09T22:40:12.031+00:00`;Status="ok";StatusChecks=[Jetpack=[Status="ok"];System=[Description="Provisioning succeeded";Status="ok";Time=`2020-11-09T22:40:01.604+00:00`];VMAgent=[Status="ok"]];SubnetId="scc-rg6/DefaultNetwork_southcentralus/default";Tags=[ClusterId="Gromacs-CPU-2(ccuser@pkrvmb4ysfk4r8b:4xd6we3c)";ClusterName="Gromacs-CPU-2";CycleOwner="ccuser@pkrvmb4ysfk4r8b:4xd6we3c";LaunchTime="2020-11-09T22:37:11.885+00:00"];VirtualMachineDescription="120 vCPUs, 468.75 GB RAM, 1023.0 GB local disk"]
 Fixed = true
 SessionId = "730628d9-b424-4ea5-b025-40328b99ca5b"
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
@@ -251,8 +251,8 @@ Name = "hpc-pg0-3"
 Lifecycle = [Started=[Reason="Autoscaled";Timing=[Configure=[Begin=`2020-11-09T22:40:20.411+00:00`;Count=1;End=`2020-11-09T22:43:06.245+00:00`;Status="Succeeded"];Create=[Begin=`2020-11-09T22:37:05.349+00:00`;Count=1;End=`2020-11-09T22:43:06.305+00:00`;Status="Succeeded"];CreateVM=[Begin=`2020-11-09T22:37:11.687+00:00`;Count=1;End=`2020-11-09T22:40:12.031+00:00`;Status="Succeeded"];Started=[Begin=`2020-11-09T22:43:06.305+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Deallocate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.AllocateNodes'=[Dependencies={"Azure.CreateResourceGroup","NodeArrayActivation"};EndTime=`2020-11-09T22:40:26.041+00:00`;StartTime=`2020-11-09T22:37:11.386+00:00`;Status="Completed"];'Azure.AssignResourceGroups'=[EndTime=`2020-11-09T22:37:11.233+00:00`;StartTime=`2020-11-09T22:37:11.168+00:00`;Status="Completed"];'Azure.CreateResourceGroup'=[Dependencies={"Azure.AssignResourceGroups"};EndTime=`2020-11-09T22:37:11.352+00:00`;StartTime=`2020-11-09T22:37:11.260+00:00`;Status="Completed"];'Azure.InitializeNodes'=[EndTime=`2020-11-09T22:40:26.095+00:00`;StartTime=`2020-11-09T22:40:26.042+00:00`;Status="Completed"];'Cloud.AwaitBootup'=[EndTime=`2020-11-09T22:40:26.137+00:00`;StartTime=`2020-11-09T22:40:26.096+00:00`;Status="Completed"];'Cloud.AwaitInstallation'=[EndTime=`2020-11-09T22:43:06.304+00:00`;StartTime=`2020-11-09T22:40:26.138+00:00`;Status="Completed"];'Cloud.StageResources'=[Delay=5;Dependencies={"Cloud.ValidateNodes"};EndTime=`2020-11-09T22:37:11.166+00:00`;StartTime=`2020-11-09T22:37:05.451+00:00`;Status="Completed"];'Cloud.ValidateNodes'=[EndTime=`2020-11-09T22:37:05.425+00:00`;StartTime=`2020-11-09T22:37:05.350+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Started"
 
 

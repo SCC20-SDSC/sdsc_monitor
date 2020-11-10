@@ -3,10 +3,10 @@ Template = "hpc"
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 Region = "southcentralus"
 Status = "Off"
-State = "Terminated"
 Provider = "azure"
-CoreCount = 40
+State = "Terminated"
 NodeIndex = -1
+CoreCount = 40
 Azure = [AllocationMethod="scaleset";MaxScalesetSize=40;ResourceGroup="scc-rg6"]
 MaxCoreCount = 80
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
@@ -14,15 +14,15 @@ ClusterName = "zihao-gromacs-GPU"
 OperationId = "5fbfdee4-10b4-43b8-9d41-f476f94fef15"
 MachineType = "Standard_ND40rs_v2"
 ActivePhases = {}
-NodeId = "532775b3-3f4a-413a-82b4-d5199bcad5ff"
 AdType = "Cloud.Node"
+NodeId = "532775b3-3f4a-413a-82b4-d5199bcad5ff"
 Credentials = "azure"
 AccountName = "azure"
-Last = [ClusterSessionId="edfebcbd-7c03-453b-b0b9-4a822045cc27";Orchestration=[AllocationPlaceholder=false;ErrorCode="BadRequest";RepairCount=0;Status="deleted";StatusMessage="The selected VM Size 'Standard_ND40rs_v2' cannot boot Hypervisor Generation '1'. If this was a Create operation please check that the Hypervisor Generation of the Image matches the Hypervisor Generation of the selected VM Size. If this was an Update operation please select a Hypervisor Generation '1' VM Size."];SessionId="03177041-2920-4002-b138-76eef9b4cdad"]
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
+Last = [ClusterSessionId="edfebcbd-7c03-453b-b0b9-4a822045cc27";Orchestration=[AllocationPlaceholder=false;ErrorCode="BadRequest";RepairCount=0;Status="deleted";StatusMessage="The selected VM Size 'Standard_ND40rs_v2' cannot boot Hypervisor Generation '1'. If this was a Create operation please check that the Hypervisor Generation of the Image matches the Hypervisor Generation of the selected VM Size. If this was an Update operation please select a Hypervisor Generation '1' VM Size."];SessionId="03177041-2920-4002-b138-76eef9b4cdad"]
 Interruptible = false
-Instance = []
 PlacementGroupId = "hpc-Standard_ND40rs_v2-pg0"
+Instance = []
 Fixed = true
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
 KeyPairLocation = "~/.ssh/cyclecloud.pem"
@@ -30,8 +30,8 @@ Name = "hpc-pg0-1"
 Lifecycle = [Started=[Reason="Autoscaled";RetryCount=1;Timing=[Create=[Begin=`2020-11-09T20:19:52.979+00:00`;Count=2;End=`2020-11-09T20:20:08.038+00:00`;PriorElapsed=`20.469`;Status="Failed"]]];Terminated=[PreviousState="Started";Reason="Unknown";Timing=[Terminate=[Begin=`2020-11-09T20:20:33.881+00:00`;Count=1;End=`2020-11-09T20:20:34.679+00:00`;Status="Succeeded"];Terminated=[Begin=`2020-11-09T20:20:34.679+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Deallocate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.DeleteScalesetVm'=[EndTime=`2020-11-09T20:20:34.422+00:00`;StartTime=`2020-11-09T20:20:34.186+00:00`;Status="Completed"];'Cloud.FinalizeNodes'=[EndTime=`2020-11-09T20:20:34.679+00:00`;StartTime=`2020-11-09T20:20:34.424+00:00`;Status="Completed"];'Cloud.TerminatePreparation'=[EndTime=`2020-11-09T20:20:34.185+00:00`;StartTime=`2020-11-09T20:20:33.882+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Terminated"
 
 UsePublicNetwork = true
@@ -39,10 +39,10 @@ Template = "hpc"
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 Region = "southcentralus"
 Status = "Off"
-State = "Terminated"
 Provider = "azure"
-CoreCount = 40
+State = "Terminated"
 NodeIndex = -1
+CoreCount = 40
 Azure = [AllocationMethod="scaleset";MaxScalesetSize=40;ResourceGroup="scc-rg6"]
 MaxCoreCount = 80
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
@@ -50,15 +50,15 @@ ClusterName = "zihao-gromacs-GPU"
 OperationId = "a96efe93-a682-4db0-b0fc-c8cbfe086ffb"
 MachineType = "Standard_ND40rs_v2"
 ActivePhases = {}
-NodeId = "a8faf056-35e6-4e3a-a3b6-1672eecf32ff"
 AdType = "Cloud.Node"
+NodeId = "a8faf056-35e6-4e3a-a3b6-1672eecf32ff"
 Credentials = "azure"
 AccountName = "azure"
-Last = [ClusterSessionId="edfebcbd-7c03-453b-b0b9-4a822045cc27";Orchestration=[AllocationPlaceholder=false;ErrorCode="BadRequest";RepairCount=0;Status="deleted";StatusMessage="The selected VM Size 'Standard_ND40rs_v2' cannot boot Hypervisor Generation '1'. If this was a Create operation please check that the Hypervisor Generation of the Image matches the Hypervisor Generation of the selected VM Size. If this was an Update operation please select a Hypervisor Generation '1' VM Size."];SessionId="3a050701-ddd0-40fa-9add-c08e8dad290c"]
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
+Last = [ClusterSessionId="edfebcbd-7c03-453b-b0b9-4a822045cc27";Orchestration=[AllocationPlaceholder=false;ErrorCode="BadRequest";RepairCount=0;Status="deleted";StatusMessage="The selected VM Size 'Standard_ND40rs_v2' cannot boot Hypervisor Generation '1'. If this was a Create operation please check that the Hypervisor Generation of the Image matches the Hypervisor Generation of the selected VM Size. If this was an Update operation please select a Hypervisor Generation '1' VM Size."];SessionId="3a050701-ddd0-40fa-9add-c08e8dad290c"]
 Interruptible = false
-Instance = []
 PlacementGroupId = "hpc-Standard_ND40rs_v2-pg0"
+Instance = []
 Fixed = true
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
 KeyPairLocation = "~/.ssh/cyclecloud.pem"
@@ -66,8 +66,8 @@ Name = "hpc-pg0-2"
 Lifecycle = [Started=[Reason="Autoscaled";RetryCount=1;Timing=[Create=[Begin=`2020-11-09T20:19:52.979+00:00`;Count=2;End=`2020-11-09T20:20:08.038+00:00`;PriorElapsed=`15.460`;Status="Failed"]]];Terminated=[PreviousState="Started";Reason="Unknown";Timing=[Terminate=[Begin=`2020-11-09T20:20:33.881+00:00`;Count=1;End=`2020-11-09T20:20:34.679+00:00`;Status="Succeeded"];Terminated=[Begin=`2020-11-09T20:20:34.679+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Deallocate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.DeleteScalesetVm'=[EndTime=`2020-11-09T20:20:34.422+00:00`;StartTime=`2020-11-09T20:20:34.186+00:00`;Status="Completed"];'Cloud.FinalizeNodes'=[EndTime=`2020-11-09T20:20:34.679+00:00`;StartTime=`2020-11-09T20:20:34.424+00:00`;Status="Completed"];'Cloud.TerminatePreparation'=[EndTime=`2020-11-09T20:20:34.185+00:00`;StartTime=`2020-11-09T20:20:33.882+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Terminated"
 
 UsePublicNetwork = true
@@ -75,25 +75,25 @@ Template = "scheduler"
 Volumes = [sched=[Azure=[AssignedLun=0];Mount="builtinsched";Name="sched";Persistent=false;SSD=true;Size=1024];shared=[Azure=[AssignedLun=1];Mount="builtinshared";Name="shared";Persistent=true;SSD=true;Size=100]]
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 AzureResources = [ManagedDiskIds={"/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/disks/scheduler-GJQWMOBRGA3WMLJVGJSTCLJUMV-boot","/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/disks/scheduler-GJQWMOBRGA3WMLJVGJSTCLJUMV-sched"};NetworkSecurityGroupId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Network/networkSecurityGroups/scheduler-GJQWMOBRGA3WMLJVGJSTCLJUMV";PersistentManagedDiskIds={"/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/disks/scheduler-GJQWMOBRGA3WMLJVGJSTCLJUMV-shared"}]
-IsReturnProxy = true
 Region = "southcentralus"
 InputEndpoints = [ganglia=[Name="ganglia";PrivatePort=8652;PublicPort=8652]]
+IsReturnProxy = true
 Status = "Off"
-State = "Terminated"
 Provider = "azure"
+State = "Terminated"
 Azure = [Name="scheduler-GJQWMOBRGA3WMLJVGJSTCLJUMV";ResourceGroup="scc-rg6"]
 NetworkInterfaces = {[AssociatePublicIpAddress=true;Name="eth0"]}
 ClusterName = "zihao-gromacs-GPU"
 MachineType = "Standard_D12_v2"
 ActivePhases = {}
-NodeId = "549623a4-b8a3-4492-be7b-c186e23f7312"
 AdType = "Cloud.Node"
 ManagedServices = {"sharedfs"}
+NodeId = "549623a4-b8a3-4492-be7b-c186e23f7312"
 Credentials = "azure"
 Tags = [ClusterId="zihao-gromacs-GPU(ccuser@pkrvmb4ysfk4r8b:4xd6we3c)";ClusterName="zihao-gromacs-GPU";CycleOwner="ccuser@pkrvmb4ysfk4r8b:4xd6we3c";LaunchTime=`2020-11-09T19:31:09.842+00:00`;Name="scheduler"]
 AccountName = "azure"
-Last = [ClusterSessionId="edfebcbd-7c03-453b-b0b9-4a822045cc27";InstallationStatus="success";InstanceId="11720f8d6f3008f696f2b22ecef0b3dc";InstanceName="scheduler-GJQWMOBRGA3WMLJVGJSTCLJUMV";Orchestration=[];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachines/scheduler-GJQWMOBRGA3WMLJVGJSTCLJUMV";SessionId="b04a3015-1c47-4d0e-95f2-e5c992cac20a"]
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[builtinsched=[export_path="/sched";options="no_root_squash";samba=[enabled=false];type="nfs"];builtinshared=[disabled=false;export_path="/shared";samba=[enabled=false];type="nfs"];defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];maintenance_converge=[enabled=true];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];builtinsched=[fs_type="xfs";mountpoint="/sched"];builtinshared=[disabled=false;fs_type="xfs";mountpoint="/shared"];nfs_sched=[disabled=true;mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;disabled=true;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];version="19.05.5-1"]]
+Last = [ClusterSessionId="edfebcbd-7c03-453b-b0b9-4a822045cc27";InstallationStatus="success";InstanceId="11720f8d6f3008f696f2b22ecef0b3dc";InstanceName="scheduler-GJQWMOBRGA3WMLJVGJSTCLJUMV";Orchestration=[];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachines/scheduler-GJQWMOBRGA3WMLJVGJSTCLJUMV";SessionId="b04a3015-1c47-4d0e-95f2-e5c992cac20a"]
 Instance = []
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:master'=[Name="cyclecloud/slurm:master";Order=1002;Project="slurm";SourceLocker="cyclecloud";Spec="master";Version="2.1.1"];'slurm:scheduler'=[Name="slurm:scheduler";Order=1001;Project="slurm";Spec="scheduler"]]
 KeyPairLocation = "~/.ssh/cyclecloud.pem"

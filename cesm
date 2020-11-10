@@ -5,9 +5,9 @@ Volumes = [sched=[Azure=[AssignedLun=0];Mount="builtinsched";Name="sched";Persis
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 ClusterSessionId = "02e16ddb-4339-4a90-a305-b5466837647b"
 AzureResources = [DataDisksAttached=true;ExtensionsInstalled=true;NetworkInterfaceIds={"/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Network/networkInterfaces/scheduler-GI3WKMBYG5QWMLJVHFSDCLJUG4-eth0"};NetworkSecurityGroupId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Network/networkSecurityGroups/scheduler-GI3WKMBYG5QWMLJVHFSDCLJUG4";PublicIpId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Network/publicIPAddresses/scheduler-GI3WKMBYG5QWMLJVHFSDCLJUG4-eth0";VirtualMachineId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachines/scheduler-GI3WKMBYG5QWMLJVHFSDCLJUG4"]
-IsReturnProxy = true
-Region = "southcentralus"
 InputEndpoints = [ganglia=[Name="ganglia";PrivatePort=8652;PublicPort=8652]]
+Region = "southcentralus"
+IsReturnProxy = true
 Status = "Ready"
 State = "Started"
 Provider = "azure"
@@ -16,15 +16,15 @@ Azure = [Name="scheduler-GI3WKMBYG5QWMLJVHFSDCLJUG4";ResourceGroup="scc-rg6"]
 InstallationStatus = "success"
 ResourceId = "/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachines/scheduler-GI3WKMBYG5QWMLJVHFSDCLJUG4"
 NetworkInterfaces = {[AssociatePublicIpAddress=true;Name="eth0"]}
-CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 ClusterName = "cesm"
+CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 Orchestration = [Creating=false]
 MachineType = "Standard_D12_v2"
 InstanceName = "scheduler-GI3WKMBYG5QWMLJVHFSDCLJUG4"
 ActivePhases = {}
-NodeId = "97efc636-5d8b-43b6-aa30-8f035a374131"
 AdType = "Cloud.Node"
 ManagedServices = {"sharedfs"}
+NodeId = "97efc636-5d8b-43b6-aa30-8f035a374131"
 Credentials = "azure"
 Tags = [ClusterId="cesm(ccuser@pkrvmb4ysfk4r8b:4xd6we3c)";ClusterName="cesm";CycleOwner="ccuser@pkrvmb4ysfk4r8b:4xd6we3c";LaunchTime=`2020-11-08T22:16:49.264+00:00`;Name="scheduler"]
 AccountName = "azure"
@@ -45,27 +45,27 @@ Template = "hpc"
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 Region = "southcentralus"
 Status = "Off"
-State = "Terminated"
 Provider = "azure"
-CoreCount = 120
+State = "Terminated"
 NodeIndex = -1
+CoreCount = 120
 Azure = [AllocationMethod="scaleset";MaxScalesetSize=400;ResourceGroup="scc-rg6"]
 MaxCoreCount = 1200
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
-CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 ClusterName = "cesm"
+CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 OperationId = "98f94b5e-67ee-498c-aa56-cfcdffd59b55"
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
-NodeId = "bf03f926-5179-452c-9316-af7ac560d5de"
 AdType = "Cloud.Node"
+NodeId = "bf03f926-5179-452c-9316-af7ac560d5de"
 Credentials = "azure"
 AccountName = "azure"
-Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="384c295162a9e5701b481255645a4d3a";InstanceIndex=10;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/10";SessionId="43cd5697-bcbd-4c94-b333-9a799bd54077"]
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
+Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="384c295162a9e5701b481255645a4d3a";InstanceIndex=10;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/10";SessionId="43cd5697-bcbd-4c94-b333-9a799bd54077"]
 Interruptible = false
-Instance = []
 PlacementGroupId = "hpc-Standard_HB120rs_v2-pg0"
+Instance = []
 Fixed = true
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
 KeyPairLocation = "~/.ssh/cyclecloud.pem"
@@ -73,8 +73,8 @@ Name = "hpc-pg0-8"
 Lifecycle = [Started=[PreviousState="Terminated";Reason="Autoscaled";Timing=[Configure=[Begin=`2020-11-09T17:12:39.151+00:00`;Count=1;End=`2020-11-09T17:14:18.671+00:00`;Status="Succeeded"];Create=[Begin=`2020-11-09T17:08:26.149+00:00`;Count=1;End=`2020-11-09T17:14:18.731+00:00`;Status="Succeeded"];CreateVM=[Begin=`2020-11-09T17:08:32.454+00:00`;Count=1;End=`2020-11-09T17:12:33.033+00:00`;Status="Succeeded"];Started=[Begin=`2020-11-09T17:14:18.731+00:00`;Count=1;End=`2020-11-09T23:30:54.135+00:00`;Status="Canceled"]]];Terminated=[PreviousState="Started";Reason="UserInitiated";Timing=[DeleteVM=[Begin=`2020-11-09T23:29:24.425+00:00`;Count=1;End=`2020-11-09T23:30:39.068+00:00`;Status="Succeeded"];Terminate=[Begin=`2020-11-09T23:29:24.078+00:00`;Count=1;End=`2020-11-09T23:30:54.135+00:00`;Status="Succeeded"];Terminated=[Begin=`2020-11-09T23:30:54.135+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Terminate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.DeleteScalesetVm'=[EndTime=`2020-11-09T23:30:54.051+00:00`;StartTime=`2020-11-09T23:29:24.140+00:00`;Status="Completed"];'Cloud.FinalizeNodes'=[EndTime=`2020-11-09T23:30:54.135+00:00`;StartTime=`2020-11-09T23:30:54.052+00:00`;Status="Completed"];'Cloud.TerminatePreparation'=[EndTime=`2020-11-09T23:29:24.139+00:00`;StartTime=`2020-11-09T23:29:24.079+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Terminated"
 
 UsePublicNetwork = true
@@ -82,27 +82,27 @@ Template = "hpc"
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 Region = "southcentralus"
 Status = "Off"
-State = "Terminated"
 Provider = "azure"
-CoreCount = 120
+State = "Terminated"
 NodeIndex = -1
+CoreCount = 120
 Azure = [AllocationMethod="scaleset";MaxScalesetSize=400;ResourceGroup="scc-rg6"]
 MaxCoreCount = 1200
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
-CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 ClusterName = "cesm"
+CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 OperationId = "98f94b5e-67ee-498c-aa56-cfcdffd59b55"
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
-NodeId = "e2b05d8f-ea11-4539-a9a6-fca893f820ec"
 AdType = "Cloud.Node"
+NodeId = "e2b05d8f-ea11-4539-a9a6-fca893f820ec"
 Credentials = "azure"
 AccountName = "azure"
-Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="8946c0a369f47a42ce2cf889cea50f54";InstanceIndex=11;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/11";SessionId="0a9727f8-b71b-4bd0-86c2-f07eafb0663c"]
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
+Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="8946c0a369f47a42ce2cf889cea50f54";InstanceIndex=11;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/11";SessionId="0a9727f8-b71b-4bd0-86c2-f07eafb0663c"]
 Interruptible = false
-Instance = []
 PlacementGroupId = "hpc-Standard_HB120rs_v2-pg0"
+Instance = []
 Fixed = true
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
 KeyPairLocation = "~/.ssh/cyclecloud.pem"
@@ -110,8 +110,8 @@ Name = "hpc-pg0-9"
 Lifecycle = [Started=[PreviousState="Terminated";Reason="Autoscaled";Timing=[Configure=[Begin=`2020-11-09T17:12:43.258+00:00`;Count=1;End=`2020-11-09T17:14:22.667+00:00`;Status="Succeeded"];Create=[Begin=`2020-11-09T17:08:26.149+00:00`;Count=1;End=`2020-11-09T17:14:22.729+00:00`;Status="Succeeded"];CreateVM=[Begin=`2020-11-09T17:08:32.454+00:00`;Count=1;End=`2020-11-09T17:12:33.033+00:00`;Status="Succeeded"];Started=[Begin=`2020-11-09T17:14:22.729+00:00`;Count=1;End=`2020-11-09T23:30:54.135+00:00`;Status="Canceled"]]];Terminated=[PreviousState="Started";Reason="UserInitiated";Timing=[DeleteVM=[Begin=`2020-11-09T23:29:24.425+00:00`;Count=1;End=`2020-11-09T23:30:39.068+00:00`;Status="Succeeded"];Terminate=[Begin=`2020-11-09T23:29:24.078+00:00`;Count=1;End=`2020-11-09T23:30:54.135+00:00`;Status="Succeeded"];Terminated=[Begin=`2020-11-09T23:30:54.135+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Terminate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.DeleteScalesetVm'=[EndTime=`2020-11-09T23:30:54.051+00:00`;StartTime=`2020-11-09T23:29:24.140+00:00`;Status="Completed"];'Cloud.FinalizeNodes'=[EndTime=`2020-11-09T23:30:54.135+00:00`;StartTime=`2020-11-09T23:30:54.052+00:00`;Status="Completed"];'Cloud.TerminatePreparation'=[EndTime=`2020-11-09T23:29:24.139+00:00`;StartTime=`2020-11-09T23:29:24.079+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Terminated"
 
 UsePublicNetwork = true
@@ -119,27 +119,27 @@ Template = "hpc"
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 Region = "southcentralus"
 Status = "Off"
-State = "Terminated"
 Provider = "azure"
-CoreCount = 120
+State = "Terminated"
 NodeIndex = -1
+CoreCount = 120
 Azure = [AllocationMethod="scaleset";MaxScalesetSize=400;ResourceGroup="scc-rg6"]
 MaxCoreCount = 1200
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
-CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 ClusterName = "cesm"
+CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 OperationId = "98f94b5e-67ee-498c-aa56-cfcdffd59b55"
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
-NodeId = "c6dad986-d2ce-48b3-baba-19b8da59954c"
 AdType = "Cloud.Node"
+NodeId = "c6dad986-d2ce-48b3-baba-19b8da59954c"
 Credentials = "azure"
 AccountName = "azure"
-Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="d81c5c560cc3ebd15df4a3d11f6accec";InstanceIndex=9;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/9";SessionId="4d452b84-1665-46d5-9bac-9cdd95481151"]
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
+Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="d81c5c560cc3ebd15df4a3d11f6accec";InstanceIndex=9;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/9";SessionId="4d452b84-1665-46d5-9bac-9cdd95481151"]
 Interruptible = false
-Instance = []
 PlacementGroupId = "hpc-Standard_HB120rs_v2-pg0"
+Instance = []
 Fixed = true
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
 KeyPairLocation = "~/.ssh/cyclecloud.pem"
@@ -147,8 +147,8 @@ Name = "hpc-pg0-7"
 Lifecycle = [Started=[PreviousState="Terminated";Reason="Autoscaled";Timing=[Configure=[Begin=`2020-11-09T17:12:34.742+00:00`;Count=1;End=`2020-11-09T17:14:14.153+00:00`;Status="Succeeded"];Create=[Begin=`2020-11-09T17:08:26.149+00:00`;Count=1;End=`2020-11-09T17:14:14.212+00:00`;Status="Succeeded"];CreateVM=[Begin=`2020-11-09T17:08:32.454+00:00`;Count=1;End=`2020-11-09T17:12:33.033+00:00`;Status="Succeeded"];Started=[Begin=`2020-11-09T17:14:14.212+00:00`;Count=1;End=`2020-11-09T23:30:54.135+00:00`;Status="Canceled"]]];Terminated=[PreviousState="Started";Reason="UserInitiated";Timing=[DeleteVM=[Begin=`2020-11-09T23:29:24.425+00:00`;Count=1;End=`2020-11-09T23:30:39.068+00:00`;Status="Succeeded"];Terminate=[Begin=`2020-11-09T23:29:24.078+00:00`;Count=1;End=`2020-11-09T23:30:54.135+00:00`;Status="Succeeded"];Terminated=[Begin=`2020-11-09T23:30:54.135+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Terminate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.DeleteScalesetVm'=[EndTime=`2020-11-09T23:30:54.051+00:00`;StartTime=`2020-11-09T23:29:24.140+00:00`;Status="Completed"];'Cloud.FinalizeNodes'=[EndTime=`2020-11-09T23:30:54.135+00:00`;StartTime=`2020-11-09T23:30:54.052+00:00`;Status="Completed"];'Cloud.TerminatePreparation'=[EndTime=`2020-11-09T23:29:24.139+00:00`;StartTime=`2020-11-09T23:29:24.079+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Terminated"
 
 UsePublicNetwork = true
@@ -156,27 +156,27 @@ Template = "hpc"
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 Region = "southcentralus"
 Status = "Off"
-State = "Terminated"
 Provider = "azure"
-CoreCount = 120
+State = "Terminated"
 NodeIndex = -1
+CoreCount = 120
 Azure = [AllocationMethod="scaleset";MaxScalesetSize=400;ResourceGroup="scc-rg6"]
 MaxCoreCount = 1200
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
-CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 ClusterName = "cesm"
+CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 OperationId = "98f94b5e-67ee-498c-aa56-cfcdffd59b55"
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
-NodeId = "a053ddf1-c470-4722-a3f5-c722ab6538c9"
 AdType = "Cloud.Node"
+NodeId = "a053ddf1-c470-4722-a3f5-c722ab6538c9"
 Credentials = "azure"
 AccountName = "azure"
-Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="ca02812191c314d0cadeb8940cc0c313";InstanceIndex=8;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/8";SessionId="a98ca3cb-c760-4c76-a577-6b9cdb6017c1"]
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
+Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="ca02812191c314d0cadeb8940cc0c313";InstanceIndex=8;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/8";SessionId="a98ca3cb-c760-4c76-a577-6b9cdb6017c1"]
 Interruptible = false
-Instance = []
 PlacementGroupId = "hpc-Standard_HB120rs_v2-pg0"
+Instance = []
 Fixed = true
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
 KeyPairLocation = "~/.ssh/cyclecloud.pem"
@@ -184,8 +184,8 @@ Name = "hpc-pg0-10"
 Lifecycle = [Started=[PreviousState="Terminated";Reason="Autoscaled";Timing=[Configure=[Begin=`2020-11-09T17:12:40.199+00:00`;Count=1;End=`2020-11-09T17:14:21.075+00:00`;Status="Succeeded"];Create=[Begin=`2020-11-09T17:08:26.149+00:00`;Count=1;End=`2020-11-09T17:14:36.055+00:00`;Status="Succeeded"];CreateVM=[Begin=`2020-11-09T17:08:32.454+00:00`;Count=1;End=`2020-11-09T17:13:33.043+00:00`;Status="Succeeded"];Started=[Begin=`2020-11-09T17:14:36.055+00:00`;Count=1;End=`2020-11-09T23:30:54.135+00:00`;Status="Canceled"]]];Terminated=[PreviousState="Started";Reason="UserInitiated";Timing=[DeleteVM=[Begin=`2020-11-09T23:29:24.425+00:00`;Count=1;End=`2020-11-09T23:30:39.068+00:00`;Status="Succeeded"];Terminate=[Begin=`2020-11-09T23:29:24.078+00:00`;Count=1;End=`2020-11-09T23:30:54.135+00:00`;Status="Succeeded"];Terminated=[Begin=`2020-11-09T23:30:54.135+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Terminate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.DeleteScalesetVm'=[EndTime=`2020-11-09T23:30:54.051+00:00`;StartTime=`2020-11-09T23:29:24.140+00:00`;Status="Completed"];'Cloud.FinalizeNodes'=[EndTime=`2020-11-09T23:30:54.135+00:00`;StartTime=`2020-11-09T23:30:54.052+00:00`;Status="Completed"];'Cloud.TerminatePreparation'=[EndTime=`2020-11-09T23:29:24.139+00:00`;StartTime=`2020-11-09T23:29:24.079+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Terminated"
 
 UsePublicNetwork = true
@@ -193,27 +193,27 @@ Template = "hpc"
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 Region = "southcentralus"
 Status = "Off"
-State = "Terminated"
 Provider = "azure"
-CoreCount = 120
+State = "Terminated"
 NodeIndex = -1
+CoreCount = 120
 Azure = [AllocationMethod="scaleset";MaxScalesetSize=400;ResourceGroup="scc-rg6"]
 MaxCoreCount = 1200
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
-CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 ClusterName = "cesm"
+CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 OperationId = "98f94b5e-67ee-498c-aa56-cfcdffd59b55"
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
-NodeId = "3fea6178-d82e-48ad-bf27-5ffa9c2b59d0"
 AdType = "Cloud.Node"
+NodeId = "3fea6178-d82e-48ad-bf27-5ffa9c2b59d0"
 Credentials = "azure"
 AccountName = "azure"
-Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="6977eade39996429917df1c4743a09f8";InstanceIndex=15;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/15";SessionId="d00ad483-a233-4ecc-bc39-7667fe500400"]
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
+Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="6977eade39996429917df1c4743a09f8";InstanceIndex=15;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/15";SessionId="d00ad483-a233-4ecc-bc39-7667fe500400"]
 Interruptible = false
-Instance = []
 PlacementGroupId = "hpc-Standard_HB120rs_v2-pg0"
+Instance = []
 Fixed = true
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
 KeyPairLocation = "~/.ssh/cyclecloud.pem"
@@ -221,8 +221,8 @@ Name = "hpc-pg0-3"
 Lifecycle = [Started=[PreviousState="Terminated";Reason="Autoscaled";Timing=[Configure=[Begin=`2020-11-09T23:51:21.937+00:00`;Count=1;End=`2020-11-09T23:53:11.718+00:00`;Status="Succeeded"];Create=[Begin=`2020-11-09T23:47:44.380+00:00`;Count=1;End=`2020-11-09T23:53:11.779+00:00`;Status="Succeeded"];CreateVM=[Begin=`2020-11-09T23:47:50.499+00:00`;Count=1;End=`2020-11-09T23:51:21.032+00:00`;Status="Succeeded"];Started=[Begin=`2020-11-09T23:53:11.779+00:00`;Count=1;End=`2020-11-10T06:02:08.127+00:00`;Status="Canceled"]]];Terminated=[PreviousState="Started";Reason="UserInitiated";Timing=[DeleteVM=[Begin=`2020-11-10T06:01:09.154+00:00`;Count=1;End=`2020-11-10T06:01:54.031+00:00`;Status="Succeeded"];Terminate=[Begin=`2020-11-10T06:01:08.736+00:00`;Count=1;End=`2020-11-10T06:02:08.127+00:00`;Status="Succeeded"];Terminated=[Begin=`2020-11-10T06:02:08.127+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Terminate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.DeleteScalesetVm'=[EndTime=`2020-11-10T06:02:08.052+00:00`;StartTime=`2020-11-10T06:01:08.795+00:00`;Status="Completed"];'Cloud.FinalizeNodes'=[EndTime=`2020-11-10T06:02:08.126+00:00`;StartTime=`2020-11-10T06:02:08.053+00:00`;Status="Completed"];'Cloud.TerminatePreparation'=[EndTime=`2020-11-10T06:01:08.794+00:00`;StartTime=`2020-11-10T06:01:08.738+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Terminated"
 
 UsePublicNetwork = true
@@ -230,27 +230,27 @@ Template = "hpc"
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 Region = "southcentralus"
 Status = "Off"
-State = "Terminated"
 Provider = "azure"
-CoreCount = 120
+State = "Terminated"
 NodeIndex = -1
+CoreCount = 120
 Azure = [AllocationMethod="scaleset";MaxScalesetSize=400;ResourceGroup="scc-rg6"]
 MaxCoreCount = 1200
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
-CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 ClusterName = "cesm"
+CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 OperationId = "98f94b5e-67ee-498c-aa56-cfcdffd59b55"
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
-NodeId = "68b2e1a4-4664-4888-93ae-319f999715ba"
 AdType = "Cloud.Node"
+NodeId = "68b2e1a4-4664-4888-93ae-319f999715ba"
 Credentials = "azure"
 AccountName = "azure"
-Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="0920fdc6d4d30890882d6bd352b40006";InstanceIndex=13;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/13";SessionId="4afb6bf7-14c5-40b7-a942-f1d4cee7f52e"]
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
+Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="0920fdc6d4d30890882d6bd352b40006";InstanceIndex=13;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/13";SessionId="4afb6bf7-14c5-40b7-a942-f1d4cee7f52e"]
 Interruptible = false
-Instance = []
 PlacementGroupId = "hpc-Standard_HB120rs_v2-pg0"
+Instance = []
 Fixed = true
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
 KeyPairLocation = "~/.ssh/cyclecloud.pem"
@@ -258,8 +258,8 @@ Name = "hpc-pg0-1"
 Lifecycle = [Started=[PreviousState="Terminated";Reason="Autoscaled";Timing=[Configure=[Begin=`2020-11-09T23:51:28.024+00:00`;Count=1;End=`2020-11-09T23:53:19.065+00:00`;Status="Succeeded"];Create=[Begin=`2020-11-09T23:47:44.380+00:00`;Count=1;End=`2020-11-09T23:53:19.135+00:00`;Status="Succeeded"];CreateVM=[Begin=`2020-11-09T23:47:50.499+00:00`;Count=1;End=`2020-11-09T23:52:36.032+00:00`;Status="Succeeded"];Started=[Begin=`2020-11-09T23:53:19.135+00:00`;Count=1;End=`2020-11-10T06:02:08.127+00:00`;Status="Canceled"]]];Terminated=[PreviousState="Started";Reason="UserInitiated";Timing=[DeleteVM=[Begin=`2020-11-10T06:01:09.154+00:00`;Count=1;End=`2020-11-10T06:01:54.031+00:00`;Status="Succeeded"];Terminate=[Begin=`2020-11-10T06:01:08.736+00:00`;Count=1;End=`2020-11-10T06:02:08.127+00:00`;Status="Succeeded"];Terminated=[Begin=`2020-11-10T06:02:08.127+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Terminate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.DeleteScalesetVm'=[EndTime=`2020-11-10T06:02:08.052+00:00`;StartTime=`2020-11-10T06:01:08.795+00:00`;Status="Completed"];'Cloud.FinalizeNodes'=[EndTime=`2020-11-10T06:02:08.126+00:00`;StartTime=`2020-11-10T06:02:08.053+00:00`;Status="Completed"];'Cloud.TerminatePreparation'=[EndTime=`2020-11-10T06:01:08.794+00:00`;StartTime=`2020-11-10T06:01:08.738+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Terminated"
 
 UsePublicNetwork = true
@@ -267,27 +267,27 @@ Template = "hpc"
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 Region = "southcentralus"
 Status = "Off"
-State = "Terminated"
 Provider = "azure"
-CoreCount = 120
+State = "Terminated"
 NodeIndex = -1
+CoreCount = 120
 Azure = [AllocationMethod="scaleset";MaxScalesetSize=400;ResourceGroup="scc-rg6"]
 MaxCoreCount = 1200
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
-CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 ClusterName = "cesm"
+CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 OperationId = "98f94b5e-67ee-498c-aa56-cfcdffd59b55"
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
-NodeId = "3fd1805e-dc8f-4845-a2da-8ab3cbf45054"
 AdType = "Cloud.Node"
+NodeId = "3fd1805e-dc8f-4845-a2da-8ab3cbf45054"
 Credentials = "azure"
 AccountName = "azure"
-Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="1febc671426d6897fb1c853b4d2f6593";InstanceIndex=19;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/19";SessionId="5436f3d7-4688-45aa-bf29-bccdeb34bddd"]
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
+Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="1febc671426d6897fb1c853b4d2f6593";InstanceIndex=19;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/19";SessionId="5436f3d7-4688-45aa-bf29-bccdeb34bddd"]
 Interruptible = false
-Instance = []
 PlacementGroupId = "hpc-Standard_HB120rs_v2-pg0"
+Instance = []
 Fixed = true
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
 KeyPairLocation = "~/.ssh/cyclecloud.pem"
@@ -295,8 +295,8 @@ Name = "hpc-pg0-6"
 Lifecycle = [Started=[PreviousState="Terminated";Reason="Autoscaled";Timing=[Configure=[Begin=`2020-11-09T23:51:22.647+00:00`;Count=1;End=`2020-11-09T23:53:28.074+00:00`;Status="Succeeded"];Create=[Begin=`2020-11-09T23:47:44.380+00:00`;Count=1;End=`2020-11-09T23:53:28.136+00:00`;Status="Succeeded"];CreateVM=[Begin=`2020-11-09T23:47:50.499+00:00`;Count=1;End=`2020-11-09T23:51:21.032+00:00`;Status="Succeeded"];Started=[Begin=`2020-11-09T23:53:28.136+00:00`;Count=1;End=`2020-11-10T06:02:08.127+00:00`;Status="Canceled"]]];Terminated=[PreviousState="Started";Reason="UserInitiated";Timing=[DeleteVM=[Begin=`2020-11-10T06:01:09.154+00:00`;Count=1;End=`2020-11-10T06:01:54.031+00:00`;Status="Succeeded"];Terminate=[Begin=`2020-11-10T06:01:08.736+00:00`;Count=1;End=`2020-11-10T06:02:08.127+00:00`;Status="Succeeded"];Terminated=[Begin=`2020-11-10T06:02:08.127+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Terminate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.DeleteScalesetVm'=[EndTime=`2020-11-10T06:02:08.052+00:00`;StartTime=`2020-11-10T06:01:08.795+00:00`;Status="Completed"];'Cloud.FinalizeNodes'=[EndTime=`2020-11-10T06:02:08.126+00:00`;StartTime=`2020-11-10T06:02:08.053+00:00`;Status="Completed"];'Cloud.TerminatePreparation'=[EndTime=`2020-11-10T06:01:08.794+00:00`;StartTime=`2020-11-10T06:01:08.738+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Terminated"
 
 UsePublicNetwork = true
@@ -304,27 +304,27 @@ Template = "hpc"
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 Region = "southcentralus"
 Status = "Off"
-State = "Terminated"
 Provider = "azure"
-CoreCount = 120
+State = "Terminated"
 NodeIndex = -1
+CoreCount = 120
 Azure = [AllocationMethod="scaleset";MaxScalesetSize=400;ResourceGroup="scc-rg6"]
 MaxCoreCount = 1200
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
-CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 ClusterName = "cesm"
+CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 OperationId = "98f94b5e-67ee-498c-aa56-cfcdffd59b55"
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
-NodeId = "5e0c86c7-a13c-4570-8969-97ed94b15c4e"
 AdType = "Cloud.Node"
+NodeId = "5e0c86c7-a13c-4570-8969-97ed94b15c4e"
 Credentials = "azure"
 AccountName = "azure"
-Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="b2065cb51d8baa00175c83067211a254";InstanceIndex=17;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/17";SessionId="b055acf3-80ac-4f3a-b64f-b23dc1fdcc21"]
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
+Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="b2065cb51d8baa00175c83067211a254";InstanceIndex=17;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/17";SessionId="b055acf3-80ac-4f3a-b64f-b23dc1fdcc21"]
 Interruptible = false
-Instance = []
 PlacementGroupId = "hpc-Standard_HB120rs_v2-pg0"
+Instance = []
 Fixed = true
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
 KeyPairLocation = "~/.ssh/cyclecloud.pem"
@@ -332,8 +332,8 @@ Name = "hpc-pg0-5"
 Lifecycle = [Started=[PreviousState="Terminated";Reason="Autoscaled";Timing=[Configure=[Begin=`2020-11-09T23:51:22.071+00:00`;Count=1;End=`2020-11-09T23:53:28.911+00:00`;Status="Succeeded"];Create=[Begin=`2020-11-09T23:47:44.380+00:00`;Count=1;End=`2020-11-09T23:53:28.975+00:00`;Status="Succeeded"];CreateVM=[Begin=`2020-11-09T23:47:50.499+00:00`;Count=1;End=`2020-11-09T23:51:21.032+00:00`;Status="Succeeded"];Started=[Begin=`2020-11-09T23:53:28.975+00:00`;Count=1;End=`2020-11-10T06:02:08.127+00:00`;Status="Canceled"]]];Terminated=[PreviousState="Started";Reason="UserInitiated";Timing=[DeleteVM=[Begin=`2020-11-10T06:01:09.154+00:00`;Count=1;End=`2020-11-10T06:01:54.031+00:00`;Status="Succeeded"];Terminate=[Begin=`2020-11-10T06:01:08.736+00:00`;Count=1;End=`2020-11-10T06:02:08.127+00:00`;Status="Succeeded"];Terminated=[Begin=`2020-11-10T06:02:08.127+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Terminate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.DeleteScalesetVm'=[EndTime=`2020-11-10T06:02:08.052+00:00`;StartTime=`2020-11-10T06:01:08.795+00:00`;Status="Completed"];'Cloud.FinalizeNodes'=[EndTime=`2020-11-10T06:02:08.126+00:00`;StartTime=`2020-11-10T06:02:08.053+00:00`;Status="Completed"];'Cloud.TerminatePreparation'=[EndTime=`2020-11-10T06:01:08.794+00:00`;StartTime=`2020-11-10T06:01:08.738+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Terminated"
 
 UsePublicNetwork = true
@@ -341,27 +341,27 @@ Template = "hpc"
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 Region = "southcentralus"
 Status = "Off"
-State = "Terminated"
 Provider = "azure"
-CoreCount = 120
+State = "Terminated"
 NodeIndex = -1
+CoreCount = 120
 Azure = [AllocationMethod="scaleset";MaxScalesetSize=400;ResourceGroup="scc-rg6"]
 MaxCoreCount = 1200
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
-CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 ClusterName = "cesm"
+CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 OperationId = "98f94b5e-67ee-498c-aa56-cfcdffd59b55"
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
-NodeId = "467ae2a0-9a12-4d1e-8f00-adab0a76d497"
 AdType = "Cloud.Node"
+NodeId = "467ae2a0-9a12-4d1e-8f00-adab0a76d497"
 Credentials = "azure"
 AccountName = "azure"
-Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="d8cf2954fa1d896665b3b13f33544098";InstanceIndex=16;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/16";SessionId="4ecdc4f6-cc54-4c11-9b7d-d8b04ccfd512"]
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
+Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="d8cf2954fa1d896665b3b13f33544098";InstanceIndex=16;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/16";SessionId="4ecdc4f6-cc54-4c11-9b7d-d8b04ccfd512"]
 Interruptible = false
-Instance = []
 PlacementGroupId = "hpc-Standard_HB120rs_v2-pg0"
+Instance = []
 Fixed = true
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
 KeyPairLocation = "~/.ssh/cyclecloud.pem"
@@ -369,8 +369,8 @@ Name = "hpc-pg0-4"
 Lifecycle = [Started=[PreviousState="Terminated";Reason="Autoscaled";Timing=[Configure=[Begin=`2020-11-09T23:51:32.653+00:00`;Count=1;End=`2020-11-09T23:54:15.313+00:00`;Status="Succeeded"];Create=[Begin=`2020-11-09T23:47:44.380+00:00`;Count=1;End=`2020-11-09T23:54:15.374+00:00`;Status="Succeeded"];CreateVM=[Begin=`2020-11-09T23:47:50.499+00:00`;Count=1;End=`2020-11-09T23:51:21.032+00:00`;Status="Succeeded"];Started=[Begin=`2020-11-09T23:54:15.374+00:00`;Count=1;End=`2020-11-10T06:02:08.127+00:00`;Status="Canceled"]]];Terminated=[PreviousState="Started";Reason="UserInitiated";Timing=[DeleteVM=[Begin=`2020-11-10T06:01:09.154+00:00`;Count=1;End=`2020-11-10T06:01:54.031+00:00`;Status="Succeeded"];Terminate=[Begin=`2020-11-10T06:01:08.736+00:00`;Count=1;End=`2020-11-10T06:02:08.127+00:00`;Status="Succeeded"];Terminated=[Begin=`2020-11-10T06:02:08.127+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Terminate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.DeleteScalesetVm'=[EndTime=`2020-11-10T06:02:08.052+00:00`;StartTime=`2020-11-10T06:01:08.795+00:00`;Status="Completed"];'Cloud.FinalizeNodes'=[EndTime=`2020-11-10T06:02:08.126+00:00`;StartTime=`2020-11-10T06:02:08.053+00:00`;Status="Completed"];'Cloud.TerminatePreparation'=[EndTime=`2020-11-10T06:01:08.794+00:00`;StartTime=`2020-11-10T06:01:08.738+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Terminated"
 
 UsePublicNetwork = true
@@ -378,27 +378,27 @@ Template = "hpc"
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 Region = "southcentralus"
 Status = "Off"
-State = "Terminated"
 Provider = "azure"
-CoreCount = 120
+State = "Terminated"
 NodeIndex = -1
+CoreCount = 120
 Azure = [AllocationMethod="scaleset";MaxScalesetSize=400;ResourceGroup="scc-rg6"]
 MaxCoreCount = 1200
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
-CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 ClusterName = "cesm"
+CloudInit = "#cloud-config\npackages:\n- \"perl(XML::LibXML)\"\n- cmake"
 OperationId = "98f94b5e-67ee-498c-aa56-cfcdffd59b55"
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
-NodeId = "4af717e7-761d-4b98-b296-840a07b8527e"
 AdType = "Cloud.Node"
+NodeId = "4af717e7-761d-4b98-b296-840a07b8527e"
 Credentials = "azure"
 AccountName = "azure"
-Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="3a069f5cf6226c3cbdc53b10421b07ae";InstanceIndex=14;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/14";SessionId="0ca64014-03bd-4a5f-be5c-a928378c9d0c"]
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
+Last = [ClusterSessionId="02e16ddb-4339-4a90-a305-b5466837647b";DeleteRequest="success";InstallationStatus="success";InstanceId="3a069f5cf6226c3cbdc53b10421b07ae";InstanceIndex=14;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-xzzvr5236bfgl/virtualMachines/14";SessionId="0ca64014-03bd-4a5f-be5c-a928378c9d0c"]
 Interruptible = false
-Instance = []
 PlacementGroupId = "hpc-Standard_HB120rs_v2-pg0"
+Instance = []
 Fixed = true
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
 KeyPairLocation = "~/.ssh/cyclecloud.pem"
@@ -406,8 +406,8 @@ Name = "hpc-pg0-2"
 Lifecycle = [Started=[PreviousState="Terminated";Reason="Autoscaled";Timing=[Configure=[Begin=`2020-11-09T23:51:29.841+00:00`;Count=1;End=`2020-11-09T23:53:13.875+00:00`;Status="Succeeded"];Create=[Begin=`2020-11-09T23:47:44.380+00:00`;Count=1;End=`2020-11-09T23:53:13.940+00:00`;Status="Succeeded"];CreateVM=[Begin=`2020-11-09T23:47:50.499+00:00`;Count=1;End=`2020-11-09T23:52:36.032+00:00`;Status="Succeeded"];Started=[Begin=`2020-11-09T23:53:13.940+00:00`;Count=1;End=`2020-11-10T06:02:08.127+00:00`;Status="Canceled"]]];Terminated=[PreviousState="Started";Reason="UserInitiated";Timing=[DeleteVM=[Begin=`2020-11-10T06:01:09.154+00:00`;Count=1;End=`2020-11-10T06:01:54.031+00:00`;Status="Succeeded"];Terminate=[Begin=`2020-11-10T06:01:08.736+00:00`;Count=1;End=`2020-11-10T06:02:08.127+00:00`;Status="Succeeded"];Terminated=[Begin=`2020-11-10T06:02:08.127+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Terminate"
 ImageName = "OpenLogic:CentOS-HPC:7.7:7.7.2020062600"
-StartAutomatically = false
 PhaseMap = ['Azure.DeleteScalesetVm'=[EndTime=`2020-11-10T06:02:08.052+00:00`;StartTime=`2020-11-10T06:01:08.795+00:00`;Status="Completed"];'Cloud.FinalizeNodes'=[EndTime=`2020-11-10T06:02:08.126+00:00`;StartTime=`2020-11-10T06:02:08.053+00:00`;Status="Completed"];'Cloud.TerminatePreparation'=[EndTime=`2020-11-10T06:01:08.794+00:00`;StartTime=`2020-11-10T06:01:08.738+00:00`;Status="Completed"]]
+StartAutomatically = false
 TargetState = "Terminated"
 
 
