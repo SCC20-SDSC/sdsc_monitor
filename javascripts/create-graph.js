@@ -72,7 +72,7 @@ function createGraph(data) {
 	            tick: {
 	            	multiline: false,
                 	culling: {
-                    	max: 15
+                    	max: 5
                 	}
             	}
 	        }
@@ -108,7 +108,7 @@ function createGraph(data) {
 							tick: {
 								multiline: false,
 									culling: {
-											max: 15
+											max: 5
 									}
 							}
 					}
