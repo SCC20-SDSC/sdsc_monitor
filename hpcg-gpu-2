@@ -125,7 +125,7 @@ Azure = [AllocationMethod="scaleset";MaxScalesetSize=40;ResourceGroup="scc-rg6"]
 MaxCoreCount = 120
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
 ClusterName = "hpcg-gpu-2"
-OperationId = "f0c36b23-503b-4efe-b4f5-ef8bea30a25a"
+OperationId = "df3aa6f3-cd7b-4fea-a762-ffbf50d3e639"
 MachineType = "Standard_ND40rs_v2"
 ActivePhases = {}
 NodeId = "e1984907-57d2-486f-b26e-b35bb41af6a6"
