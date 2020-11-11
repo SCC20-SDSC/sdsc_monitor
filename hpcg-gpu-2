@@ -95,8 +95,8 @@ MaxCoreCount = 120
 ResourceId = "/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-zwprrdflkfbwf/virtualMachines/0"
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
 ClusterName = "hpcg-gpu-2"
-Cell = "hpc-zwprrdflkfbwf"
 OperationId = "72c5aa84-9631-4c88-8c10-3c958f5903b0"
+Cell = "hpc-zwprrdflkfbwf"
 Orchestration = [Creating=false;Status="succeeded"]
 MachineType = "Standard_ND40rs_v2"
 ActivePhases = {}
