@@ -305,7 +305,7 @@ Azure = [AllocationMethod="scaleset";MaxScalesetSize=40;ResourceGroup="scc-rg6"]
 MaxCoreCount = 960
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
 ClusterName = "Jacob-MemXCT-CPU"
-OperationId = "29c24865-4bf8-4fc6-8275-c9276b2011e7"
+OperationId = "1810ffb3-b37f-4098-b5b4-b00f713ae476"
 MachineType = "Standard_HB120rs_v2"
 ActivePhases = {}
 NodeId = "c93ea750-7922-412b-90ee-82318d987105"
