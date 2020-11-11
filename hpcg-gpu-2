@@ -113,25 +113,29 @@ PhaseMap = ['Azure.DeleteScalesetVm'=[EndTime=`2020-11-11T18:14:33.068+00:00`;St
 TargetState = "Terminated"
 
 UsePublicNetwork = true
+InstanceIndex = 5
 Template = "hpc"
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 ClusterSessionId = "a6e265cd-4b6e-480b-bfb2-bc922a73386d"
-StatusMessage = "Allocating nodes"
+StatusMessage = "Awaiting software installation"
 Region = "southcentralus"
-Status = "Acquiring"
-State = "Allocation"
+Status = "Preparing"
+State = "Installation"
 Provider = "azure"
 CoreCount = 40
+InstanceId = "4f38778fddd59bf21bfb88d2d193fdca"
 NodeIndex = -1
 Azure = [AllocationMethod="scaleset";MaxScalesetSize=40;ResourceGroup="scc-rg6"]
+InstallationStatus = "started"
 MaxCoreCount = 120
+ResourceId = "/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-zwprrdflkfbwf/virtualMachines/5"
 NetworkInterfaces = {[AssociatePublicIpAddress=false;Name="eth0"]}
 ClusterName = "hpcg-gpu-2"
 OperationId = "94cb416c-1bd5-4f0f-a3ac-db934e7083b8"
 Cell = "hpc-zwprrdflkfbwf"
-Orchestration = [Action="create";Creating=true]
+Orchestration = [Creating=true;Status="succeeded"]
 MachineType = "Standard_ND40rs_v2"
-ActivePhases = {"Azure.AllocateNodes"}
+ActivePhases = {"Cloud.AwaitInstallation"}
 NodeId = "e1984907-57d2-486f-b26e-b35bb41af6a6"
 AdType = "Cloud.Node"
 Credentials = "azure"
@@ -139,18 +143,18 @@ AccountName = "azure"
 Last = [ClusterSessionId="a6e265cd-4b6e-480b-bfb2-bc922a73386d";DeleteRequest="success";InstallationStatus="success";InstanceId="5502fe76c1921f5a3aa29ed866f77471";InstanceIndex=0;Orchestration=[Status="deleted"];ResourceId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/virtualMachineScaleSets/hpc-zwprrdflkfbwf/virtualMachines/0";SessionId="ca13dc64-fb11-4c7e-b45e-1a2b8df8a792"]
 Configuration = [cshared=[server=[legacy_links_disabled=true]];cyclecloud=[cluster=[autoscale=[idle_time_after_jobs=3600;idle_time_before_jobs=3600]];converge_on_boot=true;exports=[defaults=[samba=[enabled=false]];sched=[disabled=true;samba=[enabled=false]];shared=[disabled=true;samba=[enabled=false]]];mounts=[additional_nfs=[address=undefined;disabled=true;export_path="/data";mountpoint="/data";options=undefined;type="nfs"];nfs_sched=[mountpoint="/sched";type="nfs"];nfs_shared=[address=undefined;export_path="/shared";mountpoint="/shared";options=undefined;type="nfs"];sched=[disabled=true];shared=[disabled=true]]];slurm=[accounting=[enabled=false;password=undefined;url=undefined;user=undefined];autoscale=true;default_partition=true;hpc=true;version="19.05.5-1"]]
 Interruptible = false
-Instance = []
+Instance = [AccountName="azure";ActualType="Azure.Instance";AdType="Cloud.Instance";BootFinishedTime=`2020-11-11T18:52:35.034+00:00`;ClusterName="hpcg-gpu-2";CoreCount=40;CreatedTime=`2020-11-11T18:52:35.034+00:00`;Credential="azure";Credentials="azure";FullyQualifiedHostName="5v1xy000005.internal.cloudapp.net";HostName="5v1xy000005";InstanceId="4f38778fddd59bf21bfb88d2d193fdca";LastUpdated=`2020-11-11T18:52:35.034+00:00`;MachineState="Started";MachineType="Standard_ND40rs_v2";Memory=672.0;NodeName="hpc-pg0-1";OperatingSystem="linux";PowerState="running";Price=26.440103999999998;PriceUpdatedTime=`2020-11-11T18:52:35.255+00:00`;PrivateHostName="5v1xy000005";PrivateIp="10.0.0.10";Provider="azure";Region="southcentralus";StartTime=`2020-11-11T18:52:35.034+00:00`;Status="ok";StatusChecks=[Jetpack=[Status="ok"];System=[Description="Provisioning succeeded";Status="ok";Time=`2020-11-11T18:52:26.121+00:00`];VMAgent=[Status="ok"]];SubnetId="scc-rg6/DefaultNetwork_southcentralus/default";Tags=[ClusterId="hpcg-gpu-2(ccuser@pkrvmb4ysfk4r8b:4xd6we3c)";ClusterName="hpcg-gpu-2";CycleOwner="ccuser@pkrvmb4ysfk4r8b:4xd6we3c";LaunchTime="2020-11-11T17:25:34.649+00:00"];VirtualMachineDescription="40 vCPUs, 672.0 GB RAM, 1023.0 GB local disk"]
 PlacementGroupId = "hpc-Standard_ND40rs_v2-pg0"
 Fixed = true
 SessionId = "57ff3f2b-43d7-4716-8045-87fb263661a4"
 KeyPairLocation = "~/.ssh/cyclecloud.pem"
 ClusterInitSpecs = ['slurm:default'=[Name="cyclecloud/slurm:default";Optional=false;Order=1000;Project="slurm";SourceLocker="cyclecloud";Spec="default";Version="2.1.1"];'slurm:execute'=[Name="cyclecloud/slurm:execute";Order=1003;Project="slurm";SourceLocker="cyclecloud";Spec="execute";Version="2.1.1"]]
 Name = "hpc-pg0-1"
-Lifecycle = [Started=[PreviousState="Terminated";Reason="UserInitiated";Timing=[Create=[Begin=`2020-11-11T18:44:58.746+00:00`;Count=1;Status="InProgress"];CreateVM=[Begin=`2020-11-11T18:45:04.517+00:00`;Count=1;Status="InProgress"]]];Terminated=[PreviousState="Started";Reason="UserInitiated";Timing=[DeleteVM=[Begin=`2020-11-11T18:32:29.523+00:00`;Count=1;End=`2020-11-11T18:33:14.032+00:00`;Status="Succeeded"];Terminate=[Begin=`2020-11-11T18:32:29.085+00:00`;Count=1;End=`2020-11-11T18:33:29.130+00:00`;Status="Succeeded"];Terminated=[Begin=`2020-11-11T18:33:29.130+00:00`;Count=1;Status="InProgress"]]]]
+Lifecycle = [Started=[PreviousState="Terminated";Reason="UserInitiated";Timing=[Configure=[Begin=`2020-11-11T18:52:37.159+00:00`;Count=1;Status="InProgress"];Create=[Begin=`2020-11-11T18:44:58.746+00:00`;Count=1;Status="InProgress"];CreateVM=[Begin=`2020-11-11T18:45:04.517+00:00`;Count=1;End=`2020-11-11T18:52:35.034+00:00`;Status="Succeeded"]]];Terminated=[PreviousState="Started";Reason="UserInitiated";Timing=[DeleteVM=[Begin=`2020-11-11T18:32:29.523+00:00`;Count=1;End=`2020-11-11T18:33:14.032+00:00`;Status="Succeeded"];Terminate=[Begin=`2020-11-11T18:32:29.085+00:00`;Count=1;End=`2020-11-11T18:33:29.130+00:00`;Status="Succeeded"];Terminated=[Begin=`2020-11-11T18:33:29.130+00:00`;Count=1;Status="InProgress"]]]]
 ShutdownPolicy = "Terminate"
 ImageName = "OpenLogic:CentOS-HPC:7_7-gen2:7.7.2020062601"
 StartAutomatically = false
-PhaseMap = ['Azure.AllocateNodes'=[Dependencies={"Azure.CreateResourceGroup","NodeArrayActivation"};Message="Allocating nodes";Resume=`2020-11-11T18:48:19+00:00`;StartTime=`2020-11-11T18:45:04.346+00:00`;Status="Sleeping"];'Azure.AssignResourceGroups'=[EndTime=`2020-11-11T18:45:04.201+00:00`;StartTime=`2020-11-11T18:45:04.144+00:00`;Status="Completed"];'Azure.CreateResourceGroup'=[Dependencies={"Azure.AssignResourceGroups"};EndTime=`2020-11-11T18:45:04.306+00:00`;StartTime=`2020-11-11T18:45:04.230+00:00`;Status="Completed"];'Cloud.StageResources'=[Delay=5;Dependencies={"Cloud.ValidateNodes"};EndTime=`2020-11-11T18:45:04.142+00:00`;StartTime=`2020-11-11T18:44:58.848+00:00`;Status="Completed"];'Cloud.ValidateNodes'=[EndTime=`2020-11-11T18:44:58.816+00:00`;StartTime=`2020-11-11T18:44:58.748+00:00`;Status="Completed"]]
+PhaseMap = ['Azure.AllocateNodes'=[Dependencies={"Azure.CreateResourceGroup","NodeArrayActivation"};EndTime=`2020-11-11T18:52:49.044+00:00`;StartTime=`2020-11-11T18:45:04.346+00:00`;Status="Completed"];'Azure.AssignResourceGroups'=[EndTime=`2020-11-11T18:45:04.201+00:00`;StartTime=`2020-11-11T18:45:04.144+00:00`;Status="Completed"];'Azure.CreateResourceGroup'=[Dependencies={"Azure.AssignResourceGroups"};EndTime=`2020-11-11T18:45:04.306+00:00`;StartTime=`2020-11-11T18:45:04.230+00:00`;Status="Completed"];'Azure.InitializeNodes'=[EndTime=`2020-11-11T18:52:49.087+00:00`;StartTime=`2020-11-11T18:52:49.045+00:00`;Status="Completed"];'Cloud.AwaitBootup'=[EndTime=`2020-11-11T18:52:49.129+00:00`;StartTime=`2020-11-11T18:52:49.088+00:00`;Status="Completed"];'Cloud.AwaitInstallation'=[Message="Awaiting software installation";Resume=`2020-11-11T18:54:19+00:00`;StartTime=`2020-11-11T18:52:49.130+00:00`;Status="Sleeping"];'Cloud.StageResources'=[Delay=5;Dependencies={"Cloud.ValidateNodes"};EndTime=`2020-11-11T18:45:04.142+00:00`;StartTime=`2020-11-11T18:44:58.848+00:00`;Status="Completed"];'Cloud.ValidateNodes'=[EndTime=`2020-11-11T18:44:58.816+00:00`;StartTime=`2020-11-11T18:44:58.748+00:00`;Status="Completed"]]
 TargetState = "Started"
 
 
