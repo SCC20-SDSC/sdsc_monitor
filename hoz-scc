@@ -579,8 +579,8 @@ Template = "scheduler"
 Volumes = [sched=[Azure=[AssignedLun=0];Mount="builtinsched";Name="sched";Persistent=false;SSD=true;Size=1024];shared=[Azure=[AssignedLun=1];Mount="builtinshared";Name="shared";Persistent=true;SSD=true;Size=100]]
 SubnetId = "scc-rg6/DefaultNetwork_southcentralus/default"
 AzureResources = [ManagedDiskIds={"/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/disks/scheduler-MJTGCYJZGI3TSLJRME2GILJUMQ-boot","/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/disks/scheduler-MJTGCYJZGI3TSLJRME2GILJUMQ-sched"};NetworkSecurityGroupId="/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Network/networkSecurityGroups/scheduler-MJTGCYJZGI3TSLJRME2GILJUMQ";PersistentManagedDiskIds={"/subscriptions/f4b71ca8-2442-461d-ba11-c2b5bcb828cc/resourceGroups/scc-rg6/providers/Microsoft.Compute/disks/scheduler-MJTGCYJZGI3TSLJRME2GILJUMQ-shared"}]
-InputEndpoints = [ganglia=[Name="ganglia";PrivatePort=8652;PublicPort=8652]]
 Region = "southcentralus"
+InputEndpoints = [ganglia=[Name="ganglia";PrivatePort=8652;PublicPort=8652]]
 IsReturnProxy = true
 Status = "Off"
 Provider = "azure"
